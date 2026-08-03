@@ -86,6 +86,18 @@
         details summary::-webkit-details-marker {
             display: none;
         }
+
+        /* Кастомный скроллбар для модального окна */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #e2e8f0;
+            border-radius: 20px;
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-black selection:text-white">
@@ -191,8 +203,8 @@
             </div>
 
             <div class="space-y-4 max-w-5xl mx-auto">
+                <!-- Категории услуг остаются без изменений -->
                 
-                <!-- Category 1: Тендерный маркетинг -->
                 <details class="group bg-zinc-50 rounded-2xl border border-zinc-200/80 transition-all duration-200 open:bg-white open:shadow-sm" open>
                     <summary class="flex items-center justify-between p-6 cursor-pointer select-none font-bold text-zinc-900 text-lg md:text-xl">
                         <div class="flex items-center space-x-4">
@@ -228,7 +240,6 @@
                     </div>
                 </details>
 
-                <!-- Category 2: ABM & Репутация -->
                 <details class="group bg-zinc-50 rounded-2xl border border-zinc-200/80 transition-all duration-200 open:bg-white open:shadow-sm">
                     <summary class="flex items-center justify-between p-6 cursor-pointer select-none font-bold text-zinc-900 text-lg md:text-xl">
                         <div class="flex items-center space-x-4">
@@ -264,7 +275,6 @@
                     </div>
                 </details>
 
-                <!-- Category 3: CRM и автоматизация -->
                 <details class="group bg-zinc-50 rounded-2xl border border-zinc-200/80 transition-all duration-200 open:bg-white open:shadow-sm">
                     <summary class="flex items-center justify-between p-6 cursor-pointer select-none font-bold text-zinc-900 text-lg md:text-xl">
                         <div class="flex items-center space-x-4">
@@ -290,7 +300,6 @@
                     </div>
                 </details>
 
-                <!-- Category 4: Digital-инфраструктура -->
                 <details class="group bg-zinc-50 rounded-2xl border border-zinc-200/80 transition-all duration-200 open:bg-white open:shadow-sm">
                     <summary class="flex items-center justify-between p-6 cursor-pointer select-none font-bold text-zinc-900 text-lg md:text-xl">
                         <div class="flex items-center space-x-4">
@@ -315,7 +324,6 @@
                         </div>
                     </div>
                 </details>
-
             </div>
         </div>
     </section>
@@ -334,7 +342,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Step 1 -->
                 <div class="relative bg-white p-8 rounded-2xl border border-zinc-200">
                     <div class="font-display text-5xl font-extrabold text-zinc-200 mb-4">01</div>
                     <h3 class="text-lg font-bold text-zinc-900 mb-2">Аудит</h3>
@@ -343,7 +350,6 @@
                     </p>
                 </div>
 
-                <!-- Step 2 -->
                 <div class="relative bg-white p-8 rounded-2xl border border-zinc-200">
                     <div class="font-display text-5xl font-extrabold text-zinc-200 mb-4">02</div>
                     <h3 class="text-lg font-bold text-zinc-900 mb-2">Стратегия и KPI</h3>
@@ -352,7 +358,6 @@
                     </p>
                 </div>
 
-                <!-- Step 3 -->
                 <div class="relative bg-white p-8 rounded-2xl border border-zinc-200">
                     <div class="font-display text-5xl font-extrabold text-zinc-200 mb-4">03</div>
                     <h3 class="text-lg font-bold text-zinc-900 mb-2">Запуск & Тесты</h3>
@@ -361,7 +366,6 @@
                     </p>
                 </div>
 
-                <!-- Step 4 -->
                 <div class="relative bg-white p-8 rounded-2xl border border-zinc-200">
                     <div class="font-display text-5xl font-extrabold text-zinc-200 mb-4">04</div>
                     <h3 class="text-lg font-bold text-zinc-900 mb-2">Масштабирование</h3>
@@ -386,7 +390,6 @@
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <!-- Case 1 -->
                 <div class="bg-zinc-50 rounded-2xl border border-zinc-200 overflow-hidden flex flex-col justify-between">
                     <div class="p-8">
                         <div class="flex items-center justify-between text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-4">
@@ -412,7 +415,6 @@
                     </div>
                 </div>
 
-                <!-- Case 2 -->
                 <div class="bg-zinc-50 rounded-2xl border border-zinc-200 overflow-hidden flex flex-col justify-between">
                     <div class="p-8">
                         <div class="flex items-center justify-between text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-4">
@@ -438,7 +440,6 @@
                     </div>
                 </div>
 
-                <!-- Case 3 -->
                 <div class="bg-zinc-50 rounded-2xl border border-zinc-200 overflow-hidden flex flex-col justify-between">
                     <div class="p-8">
                         <div class="flex items-center justify-between text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-4">
@@ -467,7 +468,7 @@
         </div>
     </section>
 
-<!-- COMPARATIVE VALUE TABLE SECTION (CARD GRID) -->
+    <!-- COMPARATIVE VALUE TABLE SECTION (CARD GRID) -->
     <section id="comparison" class="py-24 bg-zinc-900 text-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-3xl mb-16">
@@ -482,7 +483,6 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
-                <!-- Барьер 1 -->
                 <div class="bg-zinc-800/40 rounded-2xl p-6 md:p-8 border border-zinc-700/50 flex flex-col hover:bg-zinc-800/80 transition-colors">
                     <div class="mb-8">
                         <div class="flex items-center space-x-2 mb-4 text-zinc-400">
@@ -503,7 +503,6 @@
                     </div>
                 </div>
 
-                <!-- Барьер 2 -->
                 <div class="bg-zinc-800/40 rounded-2xl p-6 md:p-8 border border-zinc-700/50 flex flex-col hover:bg-zinc-800/80 transition-colors">
                     <div class="mb-8">
                         <div class="flex items-center space-x-2 mb-4 text-zinc-400">
@@ -524,7 +523,6 @@
                     </div>
                 </div>
 
-                <!-- Барьер 3 -->
                 <div class="bg-zinc-800/40 rounded-2xl p-6 md:p-8 border border-zinc-700/50 flex flex-col hover:bg-zinc-800/80 transition-colors">
                     <div class="mb-8">
                         <div class="flex items-center space-x-2 mb-4 text-zinc-400">
@@ -545,7 +543,6 @@
                     </div>
                 </div>
 
-                <!-- Барьер 4 -->
                 <div class="bg-zinc-800/40 rounded-2xl p-6 md:p-8 border border-zinc-700/50 flex flex-col hover:bg-zinc-800/80 transition-colors">
                     <div class="mb-8">
                         <div class="flex items-center space-x-2 mb-4 text-zinc-400">
@@ -566,7 +563,6 @@
                     </div>
                 </div>
 
-                <!-- Барьер 5 -->
                 <div class="bg-zinc-800/40 rounded-2xl p-6 md:p-8 border border-zinc-700/50 flex flex-col hover:bg-zinc-800/80 transition-colors">
                     <div class="mb-8">
                         <div class="flex items-center space-x-2 mb-4 text-zinc-400">
@@ -587,7 +583,6 @@
                     </div>
                 </div>
                 
-                <!-- Барьер 6 -->
                 <div class="bg-zinc-800/40 rounded-2xl p-6 md:p-8 border border-zinc-700/50 flex flex-col hover:bg-zinc-800/80 transition-colors">
                     <div class="mb-8">
                         <div class="flex items-center space-x-2 mb-4 text-zinc-400">
@@ -619,7 +614,7 @@
         </div>
     </section>
 
-  <!-- FAQ SECTION -->
+    <!-- FAQ SECTION -->
     <section id="faq" class="py-24 bg-white border-b border-zinc-200/60">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -630,8 +625,6 @@
             </div>
 
             <div class="space-y-4">
-                
-                <!-- Вопрос 1 -->
                 <div class="border border-zinc-200 rounded-2xl overflow-hidden">
                     <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
                         <span class="pr-4">У нас сложная и специфическая ниша. Как вы разберетесь в процессах без профильного образования?</span>
@@ -644,7 +637,6 @@
                     </div>
                 </div>
 
-                <!-- Вопрос 2 -->
                 <div class="border border-zinc-200 rounded-2xl overflow-hidden">
                     <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
                         <span class="pr-4">Сколько времени потребуется от наших сотрудников? Мои инженеры и так перегружены.</span>
@@ -663,7 +655,6 @@
                     </div>
                 </div>
 
-                <!-- Вопрос 3 -->
                 <div class="border border-zinc-200 rounded-2xl overflow-hidden">
                     <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
                         <span class="pr-4">У нас скоро важный конкурс. Успеем ли мы подготовить материалы за 2–3 недели?</span>
@@ -676,7 +667,6 @@
                     </div>
                 </div>
 
-                <!-- Вопрос 4 -->
                 <div class="border border-zinc-200 rounded-2xl overflow-hidden">
                     <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
                         <span class="pr-4">Даете ли вы гарантию, что после вашей упаковки мы точно выиграем тендер?</span>
@@ -695,7 +685,6 @@
                     </div>
                 </div>
 
-                <!-- Вопрос 5 -->
                 <div class="border border-zinc-200 rounded-2xl overflow-hidden">
                     <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
                         <span class="pr-4">У нас подписаны NDA с клиентами. Как показать масштаб проектов без нарушений?</span>
@@ -713,7 +702,6 @@
                     </div>
                 </div>
 
-                <!-- Вопрос 6 -->
                 <div class="border border-zinc-200 rounded-2xl overflow-hidden">
                     <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
                         <span class="pr-4">Как оценить целесообразность вложений в услуги упаковки и маркетинга (ROI)?</span>
@@ -726,7 +714,6 @@
                     </div>
                 </div>
 
-                <!-- Вопрос 7 -->
                 <div class="border border-zinc-200 rounded-2xl overflow-hidden">
                     <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
                         <span class="pr-4">У нас сильный отдел продаж. Зачем нам тратиться на маркетинг и Executive Profile?</span>
@@ -738,7 +725,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -870,11 +856,30 @@
             </div>
 
             <div class="flex space-x-6 text-sm text-zinc-500">
-                <a href="#" class="hover:text-zinc-900 transition-colors">Политика конфиденциальности</a>
-                <a href="#" class="hover:text-zinc-900 transition-colors">Пользовательское соглашение</a>
+                <button id="privacy-btn" class="hover:text-zinc-900 transition-colors focus:outline-none">Политика конфиденциальности</button>
+                <button id="terms-btn" class="hover:text-zinc-900 transition-colors focus:outline-none">Пользовательское соглашение</button>
             </div>
         </div>
     </footer>
+
+    <!-- МОДАЛЬНОЕ ОКНО ДЛЯ ДОКУМЕНТОВ -->
+    <div id="legal-modal" class="fixed inset-0 z-[100] hidden items-center justify-center">
+        <!-- Backdrop -->
+        <div id="legal-modal-backdrop" class="absolute inset-0 bg-zinc-950/40 backdrop-blur-sm transition-opacity opacity-0 duration-300"></div>
+        
+        <!-- Modal Content -->
+        <div id="legal-modal-content" class="relative z-10 w-full max-w-3xl bg-white rounded-2xl shadow-xl border border-zinc-200 p-6 sm:p-8 m-4 transform scale-95 opacity-0 transition-all duration-300 max-h-[85vh] flex flex-col">
+            <div class="flex items-center justify-between mb-6 shrink-0 border-b border-zinc-100 pb-4">
+                <h3 id="legal-modal-title" class="text-xl sm:text-2xl font-bold text-zinc-900">Документ</h3>
+                <button id="close-modal-btn" class="p-2 text-zinc-400 hover:text-zinc-900 hover:bg-zinc-100 rounded-full transition-colors focus:outline-none">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div class="overflow-y-auto pr-4 custom-scrollbar flex-grow text-zinc-600 text-sm leading-relaxed space-y-4">
+                <p>Пользовательское соглашение и ПК</p>
+            </div>
+        </div>
+    </div>
 
     <!-- JAVASCRIPT -->
     <script>
@@ -920,6 +925,58 @@
             form.style.display = 'none';
             successMsg.classList.remove('hidden');
         }
+
+        // ЛОГИКА МОДАЛЬНОГО ОКНА 
+        const privacyBtn = document.getElementById('privacy-btn');
+        const termsBtn = document.getElementById('terms-btn');
+        const legalModal = document.getElementById('legal-modal');
+        const modalBackdrop = document.getElementById('legal-modal-backdrop');
+        const modalContent = document.getElementById('legal-modal-content');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const modalTitle = document.getElementById('legal-modal-title');
+
+        function openModal(title) {
+            modalTitle.textContent = title;
+            legalModal.classList.remove('hidden');
+            legalModal.classList.add('flex');
+            
+            // Заставляем браузер перерисовать стили перед анимацией
+            void legalModal.offsetWidth;
+            
+            modalBackdrop.classList.remove('opacity-0');
+            modalBackdrop.classList.add('opacity-100');
+            modalContent.classList.remove('scale-95', 'opacity-0');
+            modalContent.classList.add('scale-100', 'opacity-100');
+            
+            // Отключаем скролл на странице
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modalBackdrop.classList.remove('opacity-100');
+            modalBackdrop.classList.add('opacity-0');
+            modalContent.classList.remove('scale-100', 'opacity-100');
+            modalContent.classList.add('scale-95', 'opacity-0');
+            
+            // Ждем завершения transition (300ms) перед скрытием элемента
+            setTimeout(() => {
+                legalModal.classList.add('hidden');
+                legalModal.classList.remove('flex');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        if(privacyBtn) privacyBtn.addEventListener('click', (e) => { e.preventDefault(); openModal('Политика конфиденциальности'); });
+        if(termsBtn) termsBtn.addEventListener('click', (e) => { e.preventDefault(); openModal('Пользовательское соглашение'); });
+        if(closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+        if(modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
+        
+        // Закрытие по клавише Esc
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !legalModal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
     </script>
 </body>
 </html>
