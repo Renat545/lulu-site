@@ -1,4 +1,557 @@
-<!-- FAQ SECTION -->
+<html lang="ru" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lulu — Маркетинговое агентство премиум-класса</title>
+    <meta name="description" content="Маркетинговое агентство Lulu. Стратегический перформанс-маркетинг, сквозная аналитика и масштабирование бизнеса.">
+    
+    <!-- Google Fonts с поддержкой кириллицы -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Montserrat:wght@500;700;800&amp;display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Inter"', 'sans-serif'],
+                        display: ['"Montserrat"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        },
+                        accent: {
+                            light: '#f4f4f5',
+                            dark: '#18181b',
+                            emerald: '#059669',
+                            gold: '#d97706'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Utility Styles -->
+    <style>
+        body {
+            background-color: #FAFAFA;
+            color: #09090B;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .bg-glass {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+        }
+
+        .accordion-content.open {
+            max-height: 500px;
+            transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+        }
+
+        .bg-grid-pattern {
+            background-size: 32px 32px;
+            background-image: 
+                linear-gradient(to right, rgba(9, 9, 11, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(9, 9, 11, 0.03) 1px, transparent 1px);
+        }
+
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:"Inter", sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.relative{position:relative}.left-0{left:0px}.right-0{right:0px}.top-0{top:0px}.z-10{z-index:10}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-16{margin-bottom:4rem}.mb-2{margin-bottom:0.5rem}.mb-20{margin-bottom:5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-2{margin-left:0.5rem}.ml-4{margin-left:1rem}.mt-1{margin-top:0.25rem}.mt-10{margin-top:2.5rem}.mt-12{margin-top:3rem}.mt-2{margin-top:0.5rem}.mt-20{margin-top:5rem}.mt-4{margin-top:1rem}.mt-8{margin-top:2rem}.ml-1{margin-left:0.25rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-12{height:3rem}.h-2{height:0.5rem}.h-20{height:5rem}.h-3{height:0.75rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-8{height:2rem}.h-16{height:4rem}.w-10{width:2.5rem}.w-12{width:3rem}.w-2{width:0.5rem}.w-3{width:0.75rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-5\/12{width:41.666667%}.w-6{width:1.5rem}.w-7\/12{width:58.333333%}.w-8{width:2rem}.w-full{width:100%}.w-16{width:4rem}.min-w-\[700px\]{min-width:700px}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-5xl{max-width:64rem}.max-w-7xl{max-width:80rem}.max-w-md{max-width:28rem}.shrink-0{flex-shrink:0}.border-collapse{border-collapse:collapse}@keyframes ping{75%, 100%{transform:scale(2);opacity:0}}.animate-ping{animation:ping 1s cubic-bezier(0, 0, 0.2, 1) infinite}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;user-select:none}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-12{gap:3rem}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.space-x-6 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.5rem * var(--tw-space-x-reverse));margin-left:calc(1.5rem * calc(1 - var(--tw-space-x-reverse)))}.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse))}.divide-zinc-200\/60 > :not([hidden]) ~ :not([hidden]){border-color:rgb(228 228 231 / 0.6)}.divide-zinc-800 > :not([hidden]) ~ :not([hidden]){--tw-divide-opacity:1;border-color:rgb(39 39 42 / var(--tw-divide-opacity, 1))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.scroll-smooth{scroll-behavior:smooth}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-y{border-top-width:1px;border-bottom-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-black\/5{border-color:rgb(0 0 0 / 0.05)}.border-zinc-100{--tw-border-opacity:1;border-color:rgb(244 244 245 / var(--tw-border-opacity, 1))}.border-zinc-200{--tw-border-opacity:1;border-color:rgb(228 228 231 / var(--tw-border-opacity, 1))}.border-zinc-200\/60{border-color:rgb(228 228 231 / 0.6)}.border-zinc-200\/80{border-color:rgb(228 228 231 / 0.8)}.border-zinc-800{--tw-border-opacity:1;border-color:rgb(39 39 42 / var(--tw-border-opacity, 1))}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-zinc-100{--tw-bg-opacity:1;background-color:rgb(244 244 245 / var(--tw-bg-opacity, 1))}.bg-zinc-100\/80{background-color:rgb(244 244 245 / 0.8)}.bg-zinc-50{--tw-bg-opacity:1;background-color:rgb(250 250 250 / var(--tw-bg-opacity, 1))}.bg-zinc-50\/50{background-color:rgb(250 250 250 / 0.5)}.bg-zinc-900{--tw-bg-opacity:1;background-color:rgb(24 24 27 / var(--tw-bg-opacity, 1))}.bg-emerald-100{--tw-bg-opacity:1;background-color:rgb(209 250 229 / var(--tw-bg-opacity, 1))}.p-2{padding:0.5rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-24{padding-top:6rem;padding-bottom:6rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.py-12{padding-top:3rem;padding-bottom:3rem}.pb-20{padding-bottom:5rem}.pb-6{padding-bottom:1.5rem}.pt-10{padding-top:2.5rem}.pt-2{padding-top:0.5rem}.pt-32{padding-top:8rem}.pt-4{padding-top:1rem}.text-left{text-align:left}.text-center{text-align:center}.font-display{font-family:"Montserrat", sans-serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-\[1\.08\]{line-height:1.08}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-tighter{letter-spacing:-0.05em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-emerald-600{--tw-text-opacity:1;color:rgb(5 150 105 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-zinc-100{--tw-text-opacity:1;color:rgb(244 244 245 / var(--tw-text-opacity, 1))}.text-zinc-200{--tw-text-opacity:1;color:rgb(228 228 231 / var(--tw-text-opacity, 1))}.text-zinc-300{--tw-text-opacity:1;color:rgb(212 212 216 / var(--tw-text-opacity, 1))}.text-zinc-400{--tw-text-opacity:1;color:rgb(161 161 170 / var(--tw-text-opacity, 1))}.text-zinc-500{--tw-text-opacity:1;color:rgb(113 113 122 / var(--tw-text-opacity, 1))}.text-zinc-600{--tw-text-opacity:1;color:rgb(82 82 91 / var(--tw-text-opacity, 1))}.text-zinc-700{--tw-text-opacity:1;color:rgb(63 63 70 / var(--tw-text-opacity, 1))}.text-zinc-800{--tw-text-opacity:1;color:rgb(39 39 42 / var(--tw-text-opacity, 1))}.text-zinc-900{--tw-text-opacity:1;color:rgb(24 24 27 / var(--tw-text-opacity, 1))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.decoration-zinc-300{-webkit-text-decoration-color:#d4d4d8;text-decoration-color:#d4d4d8}.underline-offset-8{text-underline-offset:8px}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.placeholder-zinc-400::placeholder{--tw-placeholder-opacity:1;color:rgb(161 161 170 / var(--tw-placeholder-opacity, 1))}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-200{transition-duration:200ms}.duration-300{transition-duration:300ms}.selection\:bg-black *::selection{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.selection\:bg-black::selection{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.open\:bg-white[open]{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.open\:shadow-sm[open]{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.hover\:border-zinc-300:hover{--tw-border-opacity:1;border-color:rgb(212 212 216 / var(--tw-border-opacity, 1))}.hover\:bg-emerald-500:hover{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.hover\:bg-zinc-50:hover{--tw-bg-opacity:1;background-color:rgb(250 250 250 / var(--tw-bg-opacity, 1))}.hover\:bg-zinc-800:hover{--tw-bg-opacity:1;background-color:rgb(39 39 42 / var(--tw-bg-opacity, 1))}.hover\:bg-zinc-800\/50:hover{background-color:rgb(39 39 42 / 0.5)}.hover\:text-zinc-950:hover{--tw-text-opacity:1;color:rgb(9 9 11 / var(--tw-text-opacity, 1))}.hover\:text-zinc-900:hover{--tw-text-opacity:1;color:rgb(24 24 27 / var(--tw-text-opacity, 1))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}.hover\:shadow:hover{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.hover\:shadow-lg:hover{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-zinc-900:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(24 24 27 / var(--tw-ring-opacity, 1))}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group[open] .group-open\:rotate-180{--tw-rotate:180deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group[open] .group-open\:bg-zinc-900{--tw-bg-opacity:1;background-color:rgb(24 24 27 / var(--tw-bg-opacity, 1))}.group[open] .group-open\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:-translate-y-0\.5{--tw-translate-y:-0.125rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:translate-x-0\.5{--tw-translate-x:0.125rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:opacity-80{opacity:0.8}@media (min-width: 640px){.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}.sm\:items-start{align-items:flex-start}.sm\:items-center{align-items:center}.sm\:justify-between{justify-content:space-between}.sm\:p-10{padding:2.5rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-right{text-align:right}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-6xl{font-size:3.75rem;line-height:1}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width: 768px){.md\:mt-0{margin-top:0px}.md\:flex{display:flex}.md\:hidden{display:none}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:items-end{align-items:flex-end}.md\:pb-32{padding-bottom:8rem}.md\:pt-44{padding-top:11rem}.md\:text-lg{font-size:1.125rem;line-height:1.75rem}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width: 1024px){.lg\:col-span-5{grid-column:span 5 / span 5}.lg\:col-span-7{grid-column:span 7 / span 7}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:text-7xl{font-size:4.5rem;line-height:1}}</style></head>
+<body class="antialiased selection:bg-black selection:text-white">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-glass border-b border-black/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-2 group">
+                <span class="font-display font-extrabold text-2xl tracking-tighter text-zinc-900 group-hover:opacity-80 transition">Lulu<span class="text-emerald-600">.</span></span>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-zinc-600">
+                <a href="#services" class="hover:text-zinc-950 transition-colors">Услуги</a>
+                <a href="#process" class="hover:text-zinc-950 transition-colors">Процесс</a>
+                <a href="#cases" class="hover:text-zinc-950 transition-colors">Кейсы</a>
+                <a href="#comparison" class="hover:text-zinc-950 transition-colors">Сравнение ценности</a>
+                <a href="#faq" class="hover:text-zinc-950 transition-colors">FAQ</a>
+                <a href="#contacts" class="hover:text-zinc-950 transition-colors">Контакты</a>
+            </nav>
+
+            <div class="hidden md:flex items-center">
+                <a href="#form" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-white bg-zinc-900 rounded-full hover:bg-zinc-800 transition-all shadow-sm hover:shadow active:scale-95">
+                    Отправить заявку
+                </a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden p-2 text-zinc-700 hover:text-zinc-950 focus:outline-none" aria-label="Toggle Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu" aria-hidden="true" class="lucide lucide-menu w-6 h-6"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-zinc-200 px-6 py-6 space-y-4 text-base font-medium">
+            <a href="#services" class="block text-zinc-700 hover:text-zinc-950 mobile-link">Услуги</a>
+            <a href="#process" class="block text-zinc-700 hover:text-zinc-950 mobile-link">Процесс</a>
+            <a href="#cases" class="block text-zinc-700 hover:text-zinc-950 mobile-link">Кейсы</a>
+            <a href="#comparison" class="block text-zinc-700 hover:text-zinc-950 mobile-link">Сравнение ценности</a>
+            <a href="#faq" class="block text-zinc-700 hover:text-zinc-950 mobile-link">FAQ</a>
+            <a href="#contacts" class="block text-zinc-700 hover:text-zinc-950 mobile-link">Контакты</a>
+            <div class="pt-4 border-t border-zinc-100">
+                <a href="#form" class="block w-full text-center py-3 px-4 text-sm font-medium text-white bg-zinc-900 rounded-xl mobile-link">
+                    Отправить заявку
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 bg-grid-pattern overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-zinc-100 border border-zinc-200 mb-8">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="text-xs font-semibold uppercase tracking-wider text-zinc-700">Креативное &amp; Маркетинговое Агентство</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-zinc-900 leading-[1.08] max-w-5xl">
+                Комплексный маркетинг и упаковка для <span class="underline decoration-zinc-300 underline-offset-8">лидеров рынка</span>.
+            </h1>
+
+            <p class="mt-8 text-lg sm:text-xl text-zinc-600 max-w-2xl font-normal leading-relaxed">
+                Мы создаем институциональные бренды, выстраиваем автоматизированные B2B-продажи и помогаем выигрывать крупные тендеры.
+            </p>
+
+            <div class="mt-10 flex flex-col sm:flex-row gap-4 sm:items-center">
+                <a href="#form" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-zinc-900 rounded-full hover:bg-zinc-800 transition-all shadow-md hover:shadow-lg group">
+                    <span>Отправить заявку</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-up-right" aria-hidden="true" class="lucide lucide-arrow-up-right w-5 h-5 ml-2 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+                </a>
+                <a href="#comparison" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-zinc-800 bg-white border border-zinc-200 rounded-full hover:bg-zinc-50 hover:border-zinc-300 transition-all">
+                     Сравнить ценность услуг
+                </a>
+            </div>
+
+            <div class="mt-20 pt-10 border-t border-zinc-200/80 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="font-display text-3xl sm:text-4xl font-extrabold text-zinc-900">×3.4</div>
+                    <div class="text-sm text-zinc-500 mt-1">Средний рост ROMI клиентов</div>
+                </div>
+                <div>
+                    <div class="font-display text-3xl sm:text-4xl font-extrabold text-zinc-900">2.2 млрд ₽</div>
+                    <div class="text-sm text-zinc-500 mt-1">Привлеченная выручка</div>
+                </div>
+                <div>
+                    <div class="font-display text-3xl sm:text-4xl font-extrabold text-zinc-900">&lt; 24 ч</div>
+                    <div class="text-sm text-zinc-500 mt-1">Запуск первичного аудита</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-24 bg-white border-y border-zinc-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-zinc-400">Наши компетенции</span>
+                    <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-zinc-900 mt-2">
+                        Каталог услуг и стоимость
+                    </h2>
+                </div>
+                <p class="mt-4 md:mt-0 text-zinc-600 max-w-md text-sm sm:text-base">
+                    Прозрачное ценообразование и прогнозируемый результат для каждой задачи вашего бизнеса.
+                </p>
+            </div>
+
+            <div class="space-y-4 max-w-5xl mx-auto">
+                
+                <!-- Category 1: Тендерный маркетинг -->
+                <details class="group bg-zinc-50 rounded-2xl border border-zinc-200/80 transition-all duration-200 open:bg-white open:shadow-sm" open="">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer select-none font-bold text-zinc-900 text-lg md:text-xl">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-white border border-zinc-200 flex items-center justify-center text-zinc-900 shadow-sm shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="briefcase" aria-hidden="true" class="lucide lucide-briefcase w-6 h-6"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg>
+                            </div>
+                            <span>Тендерный маркетинг и «Упаковка»</span>
+                        </div>
+                        <div class="w-8 h-8 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-500 group-open:bg-zinc-900 group-open:text-white transition-colors shrink-0 ml-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-5 h-5 transition-transform duration-300 group-open:rotate-180"><path d="m6 9 6 6 6-6"></path></svg>
+                        </div>
+                    </summary>
+                    <div class="px-6 pb-6 pt-2 border-t border-zinc-200/60 divide-y divide-zinc-200/60">
+                        <div class="py-5">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-2">
+                                <h4 class="font-bold text-zinc-900 text-base md:text-lg">Разработка Executive Profile (Инвестиционный паспорт)</h4>
+                                <div class="text-left sm:text-right shrink-0">
+                                    <div class="text-base md:text-lg font-bold text-emerald-600">От 170 000 ₽</div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-zinc-600">Создание фундаментального презентационного документа для ЛПР и СБ крупных заказчиков: финансовые показатели, мощности, лицензии, ключевая команда.</p>
+                        </div>
+                        
+                        <div class="py-5">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-2">
+                                <h4 class="font-bold text-zinc-900 text-base md:text-lg">Оцифровка и оформление кейсов (Technical Case Studies)</h4>
+                                <div class="text-left sm:text-right shrink-0">
+                                    <div class="text-base md:text-lg font-bold text-emerald-600">От 110 000 ₽</div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-zinc-600">Детальная упаковка выполненных объектов с фото/видео, объёмами работ, инженерными решениями, сроками и отзывами.</p>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Category 2: ABM & Репутация -->
+                <details class="group bg-zinc-50 rounded-2xl border border-zinc-200/80 transition-all duration-200 open:bg-white open:shadow-sm">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer select-none font-bold text-zinc-900 text-lg md:text-xl">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-white border border-zinc-200 flex items-center justify-center text-zinc-900 shadow-sm shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="target" aria-hidden="true" class="lucide lucide-target w-6 h-6"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                            </div>
+                            <span>ABM-маркетинг &amp; Репутация (SERM)</span>
+                        </div>
+                        <div class="w-8 h-8 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-500 group-open:bg-zinc-900 group-open:text-white transition-colors shrink-0 ml-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-5 h-5 transition-transform duration-300 group-open:rotate-180"><path d="m6 9 6 6 6-6"></path></svg>
+                        </div>
+                    </summary>
+                    <div class="px-6 pb-6 pt-2 border-t border-zinc-200/60 divide-y divide-zinc-200/60">
+                        <div class="py-5">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-2">
+                                <h4 class="font-bold text-zinc-900 text-base md:text-lg">Исследование и маппинг целевых аккаунтов (Оргструктура ЛПР)</h4>
+                                <div class="text-left sm:text-right shrink-0">
+                                    <div class="text-base md:text-lg font-bold text-emerald-600">От 150 000 ₽</div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-zinc-600">Составление детальной карты лиц, принимающих решения в целевых корпорациях.</p>
+                        </div>
+
+                        <div class="py-5">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-2">
+                                <h4 class="font-bold text-zinc-900 text-base md:text-lg">Управление репутацией в поисковой выдаче (SERM)</h4>
+                                <div class="text-left sm:text-right shrink-0">
+                                    <div class="text-base md:text-lg font-bold text-emerald-600">От 120 000 ₽</div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-zinc-600">Аудит инфополя, вытеснение негатива, формирование позитивной выдачи Google/Яндекс.</p>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Category 3: CRM и автоматизация -->
+                <details class="group bg-zinc-50 rounded-2xl border border-zinc-200/80 transition-all duration-200 open:bg-white open:shadow-sm">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer select-none font-bold text-zinc-900 text-lg md:text-xl">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-white border border-zinc-200 flex items-center justify-center text-zinc-900 shadow-sm shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bar-chart-3" aria-hidden="true" class="lucide lucide-bar-chart-3 w-6 h-6"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>
+                            </div>
+                            <span>CRM и автоматизация B2B-продаж</span>
+                        </div>
+                        <div class="w-8 h-8 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-500 group-open:bg-zinc-900 group-open:text-white transition-colors shrink-0 ml-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-5 h-5 transition-transform duration-300 group-open:rotate-180"><path d="m6 9 6 6 6-6"></path></svg>
+                        </div>
+                    </summary>
+                    <div class="px-6 pb-6 pt-2 border-t border-zinc-200/60 divide-y divide-zinc-200/60">
+                        <div class="py-5">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-2">
+                                <h4 class="font-bold text-zinc-900 text-base md:text-lg">Внедрение и настройка отраслевой CRM (Тендеры/B2B)</h4>
+                                <div class="text-left sm:text-right shrink-0">
+                                    <div class="text-base md:text-lg font-bold text-emerald-600">От 360 000 ₽</div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-zinc-600">Оцифровка воронки долгих B2B-продаж и участия в тендерах, интеграция с сайтом и площадками.</p>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Category 4: Digital-инфраструктура -->
+                <details class="group bg-zinc-50 rounded-2xl border border-zinc-200/80 transition-all duration-200 open:bg-white open:shadow-sm">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer select-none font-bold text-zinc-900 text-lg md:text-xl">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-white border border-zinc-200 flex items-center justify-center text-zinc-900 shadow-sm shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="laptop" aria-hidden="true" class="lucide lucide-laptop w-6 h-6"><path d="M18 5a2 2 0 0 1 2 2v8.526a2 2 0 0 0 .212.897l1.068 2.127a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45l1.068-2.127A2 2 0 0 0 4 15.526V7a2 2 0 0 1 2-2z"></path><path d="M20.054 15.987H3.946"></path></svg>
+                            </div>
+                            <span>Digital-инфраструктура &amp; Web</span>
+                        </div>
+                        <div class="w-8 h-8 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-500 group-open:bg-zinc-900 group-open:text-white transition-colors shrink-0 ml-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-5 h-5 transition-transform duration-300 group-open:rotate-180"><path d="m6 9 6 6 6-6"></path></svg>
+                        </div>
+                    </summary>
+                    <div class="px-6 pb-6 pt-2 border-t border-zinc-200/60 divide-y divide-zinc-200/60">
+                        <div class="py-5">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-2">
+                                <h4 class="font-bold text-zinc-900 text-base md:text-lg">Корпоративный сайт «институционального» уровня</h4>
+                                <div class="text-left sm:text-right shrink-0">
+                                    <div class="text-base md:text-lg font-bold text-emerald-600">От 500 000 ₽</div>
+                                </div>
+                            </div>
+                            <p class="text-sm text-zinc-600">Проектирование строгого, высоконадежного сайта компании с акцентом на масштабы.</p>
+                        </div>
+                    </div>
+                </details>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WORK PROCESS SECTION -->
+    <section id="process" class="py-24 bg-zinc-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <span class="text-xs font-bold uppercase tracking-widest text-zinc-400">Методология Lulu</span>
+                <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-zinc-900 mt-2">
+                    Как мы приводим к результату
+                </h2>
+                <p class="mt-4 text-zinc-600">
+                    Системный и прозрачный процесс работы, исключающий хаотичные действия.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="relative bg-white p-8 rounded-2xl border border-zinc-200">
+                    <div class="font-display text-5xl font-extrabold text-zinc-200 mb-4">01</div>
+                    <h3 class="text-lg font-bold text-zinc-900 mb-2">Аудит</h3>
+                    <p class="text-sm text-zinc-600 leading-relaxed">
+                        Изучаем экономику маркетинга и рекламы, слабые места воронок и точки перерасхода бюджета.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative bg-white p-8 rounded-2xl border border-zinc-200">
+                    <div class="font-display text-5xl font-extrabold text-zinc-200 mb-4">02</div>
+                    <h3 class="text-lg font-bold text-zinc-900 mb-2">Стратегия и KPI</h3>
+                    <p class="text-sm text-zinc-600 leading-relaxed">
+                        Фиксируем целевые показатели и согласовываем медиаплан.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative bg-white p-8 rounded-2xl border border-zinc-200">
+                    <div class="font-display text-5xl font-extrabold text-zinc-200 mb-4">03</div>
+                    <h3 class="text-lg font-bold text-zinc-900 mb-2">Запуск &amp; Тесты</h3>
+                    <p class="text-sm text-zinc-600 leading-relaxed">
+                        Разворачиваем рекламные кампании и анализируем первые связки креативов.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative bg-white p-8 rounded-2xl border border-zinc-200">
+                    <div class="font-display text-5xl font-extrabold text-zinc-200 mb-4">04</div>
+                    <h3 class="text-lg font-bold text-zinc-900 mb-2">Масштабирование</h3>
+                    <p class="text-sm text-zinc-600 leading-relaxed">
+                        Оптимизация эффективности каналов и увеличение прибыли в рабочих связках.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDIES SECTION -->
+    <section id="cases" class="py-24 bg-white border-t border-zinc-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-zinc-400">Результаты работы</span>
+                    <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-zinc-900 mt-2">
+                        Избранные кейсы
+                    </h2>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Case 1 -->
+                <div class="bg-zinc-50 rounded-2xl border border-zinc-200 overflow-hidden flex flex-col justify-between">
+                    <div class="p-8">
+                        <div class="flex items-center justify-between text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-4">
+                            <span>Премиальная Недвижимость</span>
+                            <span>Девелопмент</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-zinc-900 mb-3">
+                            Рост целевых обращений на +180% при снижении CPL на 32%
+                        </h3>
+                        <p class="text-sm text-zinc-600 leading-relaxed mb-6">
+                            Внедрили гибкую связку гиперлокального таргетинга, квалификации лидов через квиз-механики и сквозную CRM-аналитику.
+                        </p>
+                    </div>
+                    <div class="p-8 bg-zinc-100/80 border-t border-zinc-200 grid grid-cols-2 gap-4 text-center">
+                        <div>
+                            <div class="font-display text-2xl font-bold text-emerald-600">1.4 млрд ₽</div>
+                            <div class="text-xs text-zinc-500">Продаж с рекламы</div>
+                        </div>
+                        <div>
+                            <div class="font-display text-2xl font-bold text-zinc-900">410%</div>
+                            <div class="text-xs text-zinc-500">ROMI</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 2 -->
+                <div class="bg-zinc-50 rounded-2xl border border-zinc-200 overflow-hidden flex flex-col justify-between">
+                    <div class="p-8">
+                        <div class="flex items-center justify-between text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-4">
+                            <span>B2B SaaS Платформа</span>
+                            <span>IT &amp; Software</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-zinc-900 mb-3">
+                            Масштабирование платного трафика до 8 500+ демо-заявок в месяц
+                        </h3>
+                        <p class="text-sm text-zinc-600 leading-relaxed mb-6">
+                            Оптимизировали контекстные кампании в Yandex, внедрили автоматический scoring лидов и Account-Based ретаргетинг.
+                        </p>
+                    </div>
+                    <div class="p-8 bg-zinc-100/80 border-t border-zinc-200 grid grid-cols-2 gap-4 text-center">
+                        <div>
+                            <div class="font-display text-2xl font-bold text-emerald-600">-40%</div>
+                            <div class="text-xs text-zinc-500">Стоимость Demo</div>
+                        </div>
+                        <div>
+                            <div class="font-display text-2xl font-bold text-zinc-900">3.2×</div>
+                            <div class="text-xs text-zinc-500">Рост ARR</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case 3 -->
+                <div class="bg-zinc-50 rounded-2xl border border-zinc-200 overflow-hidden flex flex-col justify-between">
+                    <div class="p-8">
+                        <div class="flex items-center justify-between text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-4">
+                            <span>E-Commerce Ритейл</span>
+                            <span>Fashion &amp; Luxury</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-zinc-900 mb-3">
+                            Увеличение онлайн-выручки бренда за 5 месяцев в 2.8 раза
+                        </h3>
+                        <p class="text-sm text-zinc-600 leading-relaxed mb-6">
+                            Пересобрали перформанс-микс, настроили смарт-товарные кампании и оптимизировали конверсию чекаута.
+                        </p>
+                    </div>
+                    <div class="p-8 bg-zinc-100/80 border-t border-zinc-200 grid grid-cols-2 gap-4 text-center">
+                        <div>
+                            <div class="font-display text-2xl font-bold text-emerald-600">+185%</div>
+                            <div class="text-xs text-zinc-500">Выручка</div>
+                        </div>
+                        <div>
+                            <div class="font-display text-2xl font-bold text-zinc-900">520%</div>
+                            <div class="text-xs text-zinc-500">ДРР в норме</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPARATIVE VALUE TABLE SECTION -->
+    <section id="comparison" class="py-24 bg-zinc-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-emerald-400">Сравнительный анализ</span>
+                <h2 class="text-3xl sm:text-5xl font-display font-extrabold mt-2 text-white">
+                    Как мы снимаем ключевые барьеры сделок
+                </h2>
+                <p class="mt-4 text-zinc-400">
+                    Переводим сомнения вашего заказчика в неоспоримые преимущества вашей компании.
+                </p>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse min-w-[700px]">
+                    <thead>
+                        <tr class="border-b border-zinc-800 text-xs font-semibold uppercase tracking-wider text-zinc-400">
+                            <th class="py-4 px-6 w-5/12 text-zinc-300">Сомнение / Барьер заказчика</th>
+                            <th class="py-4 px-6 w-7/12 text-emerald-400">Получите с нами</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-zinc-800 text-sm sm:text-base">
+                        
+                        <!-- Row 1 -->
+                        <tr class="hover:bg-zinc-800/50 transition-colors">
+                            <td class="py-6 px-6 font-semibold text-zinc-300">
+                                «Мы вас не знаем / Нет доверия к бренду»
+                            </td>
+                            <td class="py-6 px-6 text-zinc-100 leading-relaxed">
+                                Инвестиционный паспорт и статус надежного партнера, проходящие жесткий комплаенс службы безопасности (СБ).
+                            </td>
+                        </tr>
+
+                        <!-- Row 2 -->
+                        <tr class="hover:bg-zinc-800/50 transition-colors">
+                            <td class="py-6 px-6 font-semibold text-zinc-300">
+                                «А справитесь ли вы с нашими объемами?»
+                            </td>
+                            <td class="py-6 px-6 text-zinc-100 leading-relaxed">
+                                Документальные доказательства успешно реализованных сложных проектов с фото, цифрами и отзывами.
+                            </td>
+                        </tr>
+
+                        <!-- Row 3 -->
+                        <tr class="hover:bg-zinc-800/50 transition-colors">
+                            <td class="py-6 px-6 font-semibold text-zinc-300">
+                                «Долгое согласование / ЛПР уходит в тень»
+                            </td>
+                            <td class="py-6 px-6 text-zinc-100 leading-relaxed">
+                                Персонализированные предложения под конкретных лиц, принимающих решения (ЛПР), и маппинг оргструктуры.
+                            </td>
+                        </tr>
+
+                        <!-- Row 4 -->
+                        <tr class="hover:bg-zinc-800/50 transition-colors">
+                            <td class="py-6 px-6 font-semibold text-zinc-300">
+                                «Хаос в процессах и потерей заявок»
+                            </td>
+                            <td class="py-6 px-6 text-zinc-100 leading-relaxed">
+                                Прозрачная воронка долгих продаж, исключающая человеческий фактор и потерю договоренностей на этапах тендера.
+                            </td>
+                        </tr>
+
+                        <!-- Row 5 -->
+                        <tr class="hover:bg-zinc-800/50 transition-colors">
+                            <td class="py-6 px-6 font-semibold text-zinc-300">
+                                «Слабый или устаревший сайт компании»
+                            </td>
+                            <td class="py-6 px-6 text-zinc-100 leading-relaxed">
+                                Создание имиджа стабильной и современной корпорации, вызывающей уважение у топ-менеджмента заказчика.
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="#form" class="inline-flex items-center justify-center px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold rounded-2xl transition-all shadow-lg space-x-2">
+                    <span>Снять барьеры и запустить проект</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
     <section id="faq" class="py-24 bg-white border-b border-zinc-200/60">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -9,115 +562,222 @@
             </div>
 
             <div class="space-y-4">
+                <div class="border border-zinc-200 rounded-2xl overflow-hidden">
+                    <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
+                        <span>С какими минимальными бюджетами вы работаете?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-5 h-5 text-zinc-400 transition-transform"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div class="accordion-content bg-zinc-50/50 px-6">
+                        <p class="py-4 text-sm text-zinc-600 leading-relaxed">
+                            Мы рекомендуем начинать работу с проектами от 200 000 ₽ в месяц. Это позволяет провести полноценную работу, будь то ABM-маркетинг или внедрение CRM, и быстро получить достоверные результаты.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="border border-zinc-200 rounded-2xl overflow-hidden">
+                    <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
+                        <span>Как быстро мы увидим первые результаты?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-5 h-5 text-zinc-400 transition-transform"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div class="accordion-content bg-zinc-50/50 px-6">
+                        <p class="py-4 text-sm text-zinc-600 leading-relaxed">
+                            Первые целевые обращения и лиды вы получаете в течение первых 7-10 дней после запуска. На полную оптимизацию стратегии обычно требуется от 3 до 4 недель.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="border border-zinc-200 rounded-2xl overflow-hidden">
+                    <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
+                        <span>Фиксируются ли ключевые показатели и сроки в договоре?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down w-5 h-5 text-zinc-400 transition-transform"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div class="accordion-content bg-zinc-50/50 px-6">
+                        <p class="py-4 text-sm text-zinc-600 leading-relaxed">
+                            Да. Все этапы работы — от разработки Executive Profile до внедрения дашбордов, имеют четко зафиксированные показатели и стоимость в рамках прозрачного договора SLA.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM & CONTACTS SECTION -->
+    <section id="form" class="py-24 bg-zinc-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="contacts">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
                 
-                <!-- Вопрос 1 -->
-                <div class="border border-zinc-200 rounded-2xl overflow-hidden">
-                    <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
-                        <span class="pr-4">У нас сложная и специфическая ниша. Как вы разберетесь в процессах без профильного образования?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 transition-transform shrink-0"></i>
-                    </button>
-                    <div class="accordion-content bg-zinc-50/50 px-6">
-                        <div class="py-4 text-sm text-zinc-600 leading-relaxed">
-                            Мы не придумываем смыслы за вас, а выступаем «архитекторами и оцифровщиками» вашей экспертизы. За каждым проектом закрепляется бизнес-аналитик и интервьюер. Мы проводим серии коротких глубинным интервью с вашими главными инженерами, техническими директорами и сейлзами, вытаскиваем ключевые цифры, факты и технологические нюансы, а затем переводим их на язык бизнес-выгоды, понятный ЛПР и службам безопасности вашего заказчика. Все материалы проходят многоэтапное согласование с вашей технической командой.
+                <div class="lg:col-span-5 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-zinc-400">Связаться с нами</span>
+                        <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-zinc-900 mt-2">
+                            Обсудим ваш проект?
+                        </h2>
+                        <p class="mt-4 text-zinc-600 leading-relaxed">
+                            Заполните форму, и наш ведущий стратег свяжется с вами для обсуждения задач и проведения первичного аудита.
+                        </p>
+
+                        <div class="mt-10 space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 rounded-xl bg-white border border-zinc-200 flex items-center justify-center text-zinc-900 shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="mail" aria-hidden="true" class="lucide lucide-mail w-5 h-5"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-zinc-400">Электронная почта</div>
+                                    <a href="mailto:hello@lulu-agency.com" class="text-base font-bold text-zinc-900 hover:underline">hello@lulu-agency.com</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 rounded-xl bg-white border border-zinc-200 flex items-center justify-center text-zinc-900 shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-5 h-5"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-zinc-400">Телефон</div>
+                                    <a href="tel:+74950000000" class="text-base font-bold text-zinc-900 hover:underline">+7 (495) 000-00-00</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 rounded-xl bg-white border border-zinc-200 flex items-center justify-center text-zinc-900 shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin w-5 h-5"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-zinc-400">Главный офис</div>
+                                    <div class="text-base font-bold text-zinc-900">Москва, Пресненская наб., 12 (Башня Федерация)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 p-6 bg-white rounded-2xl border border-zinc-200">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-3 h-3 rounded-full bg-emerald-500 animate-ping"></div>
+                            <span class="text-xs font-semibold text-zinc-700">Скорость ответа: в течение 15 минут в рабочее время</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Вопрос 2 -->
-                <div class="border border-zinc-200 rounded-2xl overflow-hidden">
-                    <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
-                        <span class="pr-4">Сколько времени потребуется от наших сотрудников? Мои инженеры и так перегружены.</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 transition-transform shrink-0"></i>
-                    </button>
-                    <div class="accordion-content bg-zinc-50/50 px-6">
-                        <div class="py-4 text-sm text-zinc-600 leading-relaxed space-y-3">
-                            <p>Мы берем на себя 85–90% всей рутины. От вашей команды потребуется суммарно 3–5 часов на весь проект:</p>
-                            <ul class="list-disc pl-5 space-y-1">
-                                <li><strong>1 час</strong> — установочная сессия и передача исходных материалов (документы, смета, старые презентации).</li>
-                                <li><strong>2–3 часа</strong> — интервью с ключевыми экспертами по разработанному нами опроснику.</li>
-                                <li><strong>1 час</strong> — финальная приемка и внесение точечных правок.</li>
-                            </ul>
-                            <p>Вся подготовка текстов, верстка, дизайн, структуры и оцифровка остаются полностью на нашей стороне.</p>
+                <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-zinc-200 shadow-sm">
+                    <form id="lead-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-zinc-700 mb-2">Ваше имя *</label>
+                                <input type="text" required="" placeholder="Александр" class="w-full px-4 py-3.5 bg-zinc-50 border border-zinc-200 rounded-xl text-zinc-900 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-900 transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-zinc-700 mb-2">Телефон / Telegram *</label>
+                                <input type="text" required="" placeholder="+7 (999) 000-00-00" class="w-full px-4 py-3.5 bg-zinc-50 border border-zinc-200 rounded-xl text-zinc-900 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-900 transition-all">
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Вопрос 3 -->
-                <div class="border border-zinc-200 rounded-2xl overflow-hidden">
-                    <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
-                        <span class="pr-4">У нас скоро важный конкурс. Успеем ли мы подготовить материалы за 2–3 недели?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 transition-transform shrink-0"></i>
-                    </button>
-                    <div class="accordion-content bg-zinc-50/50 px-6">
-                        <div class="py-4 text-sm text-zinc-600 leading-relaxed">
-                            Для горящих задач у нас предусмотрен формат экспресс-спринта. В этом случае мы фиксируем приоритетный пул задач (например, ключевой Executive Profile и оцифровку 2–3 самых релевантных кейсов под нишу конкретного заказчика) и выдаем готовый продукт за 10–14 рабочих дней. Параллельно вы сразу получаете интерактивные и PDF-версии для отправки СБ и ЛПР.
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-zinc-700 mb-2">Рабочий Email *</label>
+                                <input type="email" required="" placeholder="alex@company.com" class="w-full px-4 py-3.5 bg-zinc-50 border border-zinc-200 rounded-xl text-zinc-900 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-900 transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-zinc-700 mb-2">Интересующая услуга</label>
+                                <select class="w-full px-4 py-3.5 bg-zinc-50 border border-zinc-200 rounded-xl text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-900 transition-all">
+                                    <option>Тендерный маркетинг и Упаковка</option>
+                                    <option>ABM-маркетинг</option>
+                                    <option>Digital-инфраструктура и сайты</option>
+                                    <option>Внедрение CRM и аналитики</option>
+                                    <option>Комплексный проект</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Вопрос 4 -->
-                <div class="border border-zinc-200 rounded-2xl overflow-hidden">
-                    <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
-                        <span class="pr-4">Даете ли вы гарантию, что после вашей упаковки мы точно выиграем тендер?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 transition-transform shrink-0"></i>
-                    </button>
-                    <div class="accordion-content bg-zinc-50/50 px-6">
-                        <div class="py-4 text-sm text-zinc-600 leading-relaxed space-y-3">
-                            <p>Выиграть тендер только за счет красивой упаковки невозможно, если не устраивает коммерческое предложение или логистика — мы честны в этом вопросе. Наша услуга гарантирует <strong>устранение стоп-факторов на стороне заказчика</strong>:</p>
-                            <ol class="list-decimal pl-5 space-y-1">
-                                <li>Вы гарантированно проходите квалификационный отбор и комплаенс Службы Безопасности.</li>
-                                <li>Заказчик видит документальные доказательства вашего опыта (а не просто обещанный уровень сервиса), что нивелирует риск «отказа из-за неизвестности бренда».</li>
-                                <li>ЛПР получают понятные материалы, которые ускоряют внутрикорпоративное согласование.</li>
-                            </ol>
-                            <p>Мы гарантируем рост конверсии из заявки/подачи в допуск к переговорам и финалу.</p>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-zinc-700 mb-2">О проекте / Задачи</label>
+                            <textarea id="form-comment" rows="4" placeholder="Расскажите о вашей нише, текущей ситуации и целях..." class="w-full px-4 py-3.5 bg-zinc-50 border border-zinc-200 rounded-xl text-zinc-900 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-900 transition-all"></textarea>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Вопрос 5 -->
-                <div class="border border-zinc-200 rounded-2xl overflow-hidden">
-                    <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
-                        <span class="pr-4">У нас подписаны NDA с клиентами. Как показать масштаб проектов без нарушений?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 transition-transform shrink-0"></i>
-                    </button>
-                    <div class="accordion-content bg-zinc-50/50 px-6">
-                        <div class="py-4 text-sm text-zinc-600 leading-relaxed space-y-3">
-                            <p>Это стандартная практика в B2B. Мы используем три проверенных механики:</p>
-                            <ul class="list-disc pl-5 space-y-1">
-                                <li><strong>Обезличивание данных:</strong> замена прямых названий брендов на категорию (например, <em>«Крупнейший ритейлер бытовой техники из ТОП-3»</em>).</li>
-                                <li><strong>Относительные показатели:</strong> использование % роста, коэффициентов и сэкономленных часов вместо раскрытия прямых финпоказателей в рублях.</li>
-                                <li><strong>Гриф «Для служебного пользования» (Executive summary):</strong> подготовка закрытых версий кейсов, которые передаются заказчику строго под подпись NDA на этапе квалификации.</li>
-                            </ul>
+                        <div class="pt-2">
+                            <button type="submit" class="w-full py-4 px-8 bg-zinc-900 hover:bg-zinc-800 text-white font-semibold rounded-2xl transition-all shadow-md hover:shadow-lg flex items-center justify-center space-x-2 text-base">
+                                <span>Отправить заявку</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="send" aria-hidden="true" class="lucide lucide-send w-4 h-4 ml-1"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>
+                            </button>
+                            <p class="text-xs text-center text-zinc-400 mt-4">
+                                Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности. Данные отправляются напрямую на почту агентства.
+                            </p>
                         </div>
-                    </div>
-                </div>
+                    </form>
 
-                <!-- Вопрос 6 -->
-                <div class="border border-zinc-200 rounded-2xl overflow-hidden">
-                    <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
-                        <span class="pr-4">Как оценить целесообразность вложений в услуги упаковки и маркетинга (ROI)?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 transition-transform shrink-0"></i>
-                    </button>
-                    <div class="accordion-content bg-zinc-50/50 px-6">
-                        <div class="py-4 text-sm text-zinc-600 leading-relaxed">
-                            В крупном B2B и тендерах стоимость даже одной выигранной сделки или контракта обычно перекрывает бюджет на маркетинг и упаковку в 5–10 раз. Без системной упаковки компания регулярно теряет контракты на миллионы рублей просто потому, что СБ или ЛПР выбрали более понятного и «наглядного» конкурента. Вложения в упаковку и CRM — это разовый капитал (актив), который работает на закрытие сделок следующие 2–3 года.
+                    <div id="form-success" class="hidden py-12 text-center space-y-4">
+                        <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle" aria-hidden="true" class="lucide lucide-check-circle w-8 h-8"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Вопрос 7 -->
-                <div class="border border-zinc-200 rounded-2xl overflow-hidden">
-                    <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
-                        <span class="pr-4">У нас сильный отдел продаж. Зачем нам тратиться на маркетинг и Executive Profile?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 transition-transform shrink-0"></i>
-                    </button>
-                    <div class="accordion-content bg-zinc-50/50 px-6">
-                        <div class="py-4 text-sm text-zinc-600 leading-relaxed">
-                            В современных корпорациях решение о покупке принимает не один человек, а комитет из 3–7 лиц (финансисты, юристы, СБ, технические директора, генеральный директор). Сейлз физически не может дойти до каждого из них лично. Наши материалы и ABM-инструменты работают как «невидимый коммерческий директор»: они прогревают каждого участника цепочки принятия решений до того, как ваш менеджер зайдет на финальную встречу.
-                        </div>
+                        <h3 class="text-2xl font-bold text-zinc-900">Заявка успешно отправлена!</h3>
+                        <p class="text-sm text-zinc-600 max-w-md mx-auto">
+                            Спасибо за обращение. Наш ведущий стратег свяжется с вами по указанным контактам в течение 15 минут.
+                        </p>
                     </div>
                 </div>
 
             </div>
         </div>
     </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-zinc-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-2">
+                <span class="font-display font-extrabold text-2xl text-zinc-900">Lulu<span class="text-emerald-600">.</span></span>
+                <span class="text-xs text-zinc-400 ml-4">© 2026 Lulu Agency. Все права защищены.</span>
+            </div>
+
+            <div class="flex space-x-6 text-sm text-zinc-500">
+                <a href="#" class="hover:text-zinc-900 transition-colors">Политика конфиденциальности</a>
+                <a href="#" class="hover:text-zinc-900 transition-colors">Пользовательское соглашение</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        lucide.createIcons();
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const icon = header.querySelector('[data-lucide="chevron-down"]');
+                const isOpen = content.classList.contains('open');
+                
+                document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+                document.querySelectorAll('.accordion-header [data-lucide="chevron-down"]').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                if (!isOpen) {
+                    content.classList.add('open');
+                    if (icon) icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const form = document.getElementById('lead-form');
+            const successMsg = document.getElementById('form-success');
+
+            form.style.display = 'none';
+            successMsg.classList.remove('hidden');
+        }
+    </script>
+
+</body></html>
