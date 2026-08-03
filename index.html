@@ -467,7 +467,7 @@
         </div>
     </section>
 
-    <!-- COMPARATIVE VALUE TABLE SECTION -->
+<!-- COMPARATIVE VALUE TABLE SECTION (CARD GRID) -->
     <section id="comparison" class="py-24 bg-zinc-900 text-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-3xl mb-16">
@@ -475,79 +475,124 @@
                 <h2 class="text-3xl sm:text-5xl font-display font-extrabold mt-2 text-white">
                     Как мы снимаем ключевые барьеры сделок
                 </h2>
-                <p class="mt-4 text-zinc-400">
-                    Переводим сомнения вашего заказчика в неоспоримые преимущества вашей компании.
+                <p class="mt-4 text-zinc-400 text-lg">
+                    Переводим сомнения вашего заказчика в неоспоримые преимущества вашей компании с помощью системной упаковки.
                 </p>
             </div>
 
-            <div class="overflow-x-auto">
-                <table class="w-full text-left border-collapse min-w-[700px]">
-                    <thead>
-                        <tr class="border-b border-zinc-800 text-xs font-semibold uppercase tracking-wider text-zinc-400">
-                            <th class="py-4 px-6 w-5/12 text-zinc-300">Сомнение / Барьер заказчика</th>
-                            <th class="py-4 px-6 w-7/12 text-emerald-400">Получите с нами</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-zinc-800 text-sm sm:text-base">
-                        
-                        <!-- Row 1 -->
-                        <tr class="hover:bg-zinc-800/50 transition-colors">
-                            <td class="py-6 px-6 font-semibold text-zinc-300">
-                                «Мы вас не знаем / Нет доверия к бренду»
-                            </td>
-                            <td class="py-6 px-6 text-zinc-100 leading-relaxed">
-                                Инвестиционный паспорт и статус надежного партнера, проходящие жесткий комплаенс службы безопасности (СБ).
-                            </td>
-                        </tr>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Барьер 1 -->
+                <div class="bg-zinc-800/40 rounded-2xl p-6 md:p-8 border border-zinc-700/50 flex flex-col hover:bg-zinc-800/80 transition-colors">
+                    <div class="mb-8">
+                        <div class="flex items-center space-x-2 mb-4 text-zinc-400">
+                            <i data-lucide="x" class="w-5 h-5 text-rose-500"></i>
+                            <span class="text-xs font-bold uppercase tracking-wider text-rose-500/80">Барьер заказчика</span>
+                        </div>
+                        <p class="text-lg font-semibold text-zinc-100">«Мы вас не знаем / Нет доверия к бренду»</p>
+                    </div>
+                    
+                    <div class="mt-auto pt-6 border-t border-zinc-700/50">
+                        <div class="flex items-center space-x-2 mb-4 text-emerald-400">
+                            <i data-lucide="check" class="w-5 h-5"></i>
+                            <span class="text-xs font-bold uppercase tracking-wider">Решение Lulu</span>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed">
+                            Инвестиционный паспорт и статус надежного партнера, проходящие жесткий комплаенс службы безопасности (СБ).
+                        </p>
+                    </div>
+                </div>
 
-                        <!-- Row 2 -->
-                        <tr class="hover:bg-zinc-800/50 transition-colors">
-                            <td class="py-6 px-6 font-semibold text-zinc-300">
-                                «А справитесь ли вы с нашими объемами?»
-                            </td>
-                            <td class="py-6 px-6 text-zinc-100 leading-relaxed">
-                                Документальные доказательства успешно реализованных сложных проектов с фото, цифрами и отзывами.
-                            </td>
-                        </tr>
+                <!-- Барьер 2 -->
+                <div class="bg-zinc-800/40 rounded-2xl p-6 md:p-8 border border-zinc-700/50 flex flex-col hover:bg-zinc-800/80 transition-colors">
+                    <div class="mb-8">
+                        <div class="flex items-center space-x-2 mb-4 text-zinc-400">
+                            <i data-lucide="x" class="w-5 h-5 text-rose-500"></i>
+                            <span class="text-xs font-bold uppercase tracking-wider text-rose-500/80">Барьер заказчика</span>
+                        </div>
+                        <p class="text-lg font-semibold text-zinc-100">«А справитесь ли вы с нашими объемами?»</p>
+                    </div>
+                    
+                    <div class="mt-auto pt-6 border-t border-zinc-700/50">
+                        <div class="flex items-center space-x-2 mb-4 text-emerald-400">
+                            <i data-lucide="check" class="w-5 h-5"></i>
+                            <span class="text-xs font-bold uppercase tracking-wider">Решение Lulu</span>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed">
+                            Документальные доказательства успешно реализованных сложных проектов с фото, цифрами и отзывами.
+                        </p>
+                    </div>
+                </div>
 
-                        <!-- Row 3 -->
-                        <tr class="hover:bg-zinc-800/50 transition-colors">
-                            <td class="py-6 px-6 font-semibold text-zinc-300">
-                                «Долгое согласование / ЛПР уходит в тень»
-                            </td>
-                            <td class="py-6 px-6 text-zinc-100 leading-relaxed">
-                                Персонализированные предложения под конкретных лиц, принимающих решения (ЛПР), и маппинг оргструктуры.
-                            </td>
-                        </tr>
+                <!-- Барьер 3 -->
+                <div class="bg-zinc-800/40 rounded-2xl p-6 md:p-8 border border-zinc-700/50 flex flex-col hover:bg-zinc-800/80 transition-colors">
+                    <div class="mb-8">
+                        <div class="flex items-center space-x-2 mb-4 text-zinc-400">
+                            <i data-lucide="x" class="w-5 h-5 text-rose-500"></i>
+                            <span class="text-xs font-bold uppercase tracking-wider text-rose-500/80">Барьер заказчика</span>
+                        </div>
+                        <p class="text-lg font-semibold text-zinc-100">«Долгое согласование / ЛПР уходит в тень»</p>
+                    </div>
+                    
+                    <div class="mt-auto pt-6 border-t border-zinc-700/50">
+                        <div class="flex items-center space-x-2 mb-4 text-emerald-400">
+                            <i data-lucide="check" class="w-5 h-5"></i>
+                            <span class="text-xs font-bold uppercase tracking-wider">Решение Lulu</span>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed">
+                            Персонализированные предложения под конкретных лиц, принимающих решения (ЛПР), и маппинг оргструктуры.
+                        </p>
+                    </div>
+                </div>
 
-                        <!-- Row 4 -->
-                        <tr class="hover:bg-zinc-800/50 transition-colors">
-                            <td class="py-6 px-6 font-semibold text-zinc-300">
-                                «Хаос в процессах и потерей заявок»
-                            </td>
-                            <td class="py-6 px-6 text-zinc-100 leading-relaxed">
-                                Прозрачная воронка долгих продаж, исключающая человеческий фактор и потерю договоренностей на этапах тендера.
-                            </td>
-                        </tr>
+                <!-- Барьер 4 -->
+                <div class="bg-zinc-800/40 rounded-2xl p-6 md:p-8 border border-zinc-700/50 flex flex-col hover:bg-zinc-800/80 transition-colors">
+                    <div class="mb-8">
+                        <div class="flex items-center space-x-2 mb-4 text-zinc-400">
+                            <i data-lucide="x" class="w-5 h-5 text-rose-500"></i>
+                            <span class="text-xs font-bold uppercase tracking-wider text-rose-500/80">Барьер заказчика</span>
+                        </div>
+                        <p class="text-lg font-semibold text-zinc-100">«Хаос в процессах и потеря заявок»</p>
+                    </div>
+                    
+                    <div class="mt-auto pt-6 border-t border-zinc-700/50">
+                        <div class="flex items-center space-x-2 mb-4 text-emerald-400">
+                            <i data-lucide="check" class="w-5 h-5"></i>
+                            <span class="text-xs font-bold uppercase tracking-wider">Решение Lulu</span>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed">
+                            Прозрачная воронка долгих продаж, исключающая человеческий фактор и потерю договоренностей на этапах тендера.
+                        </p>
+                    </div>
+                </div>
 
-                        <!-- Row 5 -->
-                        <tr class="hover:bg-zinc-800/50 transition-colors">
-                            <td class="py-6 px-6 font-semibold text-zinc-300">
-                                «Слабый или устаревший сайт компании»
-                            </td>
-                            <td class="py-6 px-6 text-zinc-100 leading-relaxed">
-                                Создание имиджа стабильной и современной корпорации, вызывающей уважение у топ-менеджмента заказчика.
-                            </td>
-                        </tr>
-
-                    </tbody>
-                </table>
+                <!-- Барьер 5 -->
+                <div class="bg-zinc-800/40 rounded-2xl p-6 md:p-8 border border-zinc-700/50 flex flex-col hover:bg-zinc-800/80 transition-colors lg:col-span-2 md:col-span-2 lg:col-span-1">
+                    <div class="mb-8">
+                        <div class="flex items-center space-x-2 mb-4 text-zinc-400">
+                            <i data-lucide="x" class="w-5 h-5 text-rose-500"></i>
+                            <span class="text-xs font-bold uppercase tracking-wider text-rose-500/80">Барьер заказчика</span>
+                        </div>
+                        <p class="text-lg font-semibold text-zinc-100">«Слабый или устаревший сайт компании»</p>
+                    </div>
+                    
+                    <div class="mt-auto pt-6 border-t border-zinc-700/50">
+                        <div class="flex items-center space-x-2 mb-4 text-emerald-400">
+                            <i data-lucide="check" class="w-5 h-5"></i>
+                            <span class="text-xs font-bold uppercase tracking-wider">Решение Lulu</span>
+                        </div>
+                        <p class="text-zinc-300 text-sm leading-relaxed">
+                            Создание имиджа стабильной и современной корпорации, вызывающей уважение у топ-менеджмента заказчика.
+                        </p>
+                    </div>
+                </div>
+                
             </div>
-
-            <div class="mt-12 text-center">
-                <a href="#form" class="inline-flex items-center justify-center px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold rounded-2xl transition-all shadow-lg space-x-2">
-                    <span>Снять барьеры и запустить проект</span>
-                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            
+            <div class="mt-16 flex justify-center">
+                <a href="#form" class="inline-flex items-center px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold rounded-2xl transition-all shadow-[0_0_20px_rgba(5,150,105,0.3)] hover:shadow-[0_0_30px_rgba(5,150,105,0.5)] space-x-3 group">
+                    <span>Усилить позиции компании</span>
+                    <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
                 </a>
             </div>
         </div>
