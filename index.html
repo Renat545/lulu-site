@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lulu — Маркетинговое агентство премиум-класса</title>
     <meta name="description" content="Маркетинговое агентство Lulu. Стратегический перформанс-маркетинг, сквозная аналитика и масштабирование бизнеса.">
-    
-    <!-- Google Fonts с поддержкой кириллицы -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -22,24 +20,8 @@
                         display: ['"Montserrat"', 'sans-serif'],
                     },
                     colors: {
-                        brand: {
-                            50: '#f8fafc',
-                            100: '#f1f5f9',
-                            200: '#e2e8f0',
-                            300: '#cbd5e1',
-                            400: '#94a3b8',
-                            500: '#64748b',
-                            600: '#475569',
-                            700: '#334155',
-                            800: '#1e293b',
-                            900: '#0f172a',
-                            950: '#020617',
-                        },
                         accent: {
-                            light: '#f4f4f5',
-                            dark: '#18181b',
-                            emerald: '#059669',
-                            gold: '#d97706'
+                            emerald: '#059669'
                         }
                     }
                 }
@@ -47,10 +29,8 @@
         }
     </script>
 
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Custom Utility Styles -->
     <style>
         body {
             background-color: #FAFAFA;
@@ -68,17 +48,16 @@
         .accordion-content {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+            transition: max-height 0.3s ease;
         }
 
         .accordion-content.open {
-            max-height: 500px;
-            transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+            max-height: 700px;
         }
 
         .bg-grid-pattern {
             background-size: 32px 32px;
-            background-image: 
+            background-image:
                 linear-gradient(to right, rgba(9, 9, 11, 0.03) 1px, transparent 1px),
                 linear-gradient(to bottom, rgba(9, 9, 11, 0.03) 1px, transparent 1px);
         }
@@ -86,241 +65,212 @@
         details summary::-webkit-details-marker {
             display: none;
         }
-
-        /* Кастомный скроллбар для модального окна */
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 6px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background-color: #e2e8f0;
-            border-radius: 20px;
-        }
     </style>
 </head>
+
 <body class="antialiased selection:bg-black selection:text-white">
 
-    <!-- HEADER / NAVIGATION -->
-    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-glass border-b border-black/5">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-glass border-b border-black/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="#" class="flex items-center space-x-2 group">
-                <span class="font-display font-extrabold text-2xl tracking-tighter text-zinc-900 group-hover:opacity-80 transition">Lulu<span class="text-emerald-600">.</span></span>
+            <a href="#" class="flex items-center">
+                <span class="font-display font-extrabold text-2xl tracking-tighter text-zinc-900">
+                    Lulu<span class="text-emerald-600">.</span>
+                </span>
             </a>
 
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-zinc-600">
-                <a href="#services" class="hover:text-zinc-950 transition-colors">Услуги</a>
-                <a href="#process" class="hover:text-zinc-950 transition-colors">Процесс</a>
-                <a href="#cases" class="hover:text-zinc-950 transition-colors">Кейсы</a>
-                <a href="#comparison" class="hover:text-zinc-950 transition-colors">Сравнение ценности</a>
-                <a href="#faq" class="hover:text-zinc-950 transition-colors">FAQ</a>
-                <a href="#contacts" class="hover:text-zinc-950 transition-colors">Контакты</a>
+                <a href="#services" class="hover:text-zinc-950">Услуги</a>
+                <a href="#process" class="hover:text-zinc-950">Процесс</a>
+                <a href="#cases" class="hover:text-zinc-950">Кейсы</a>
+                <a href="#comparison" class="hover:text-zinc-950">Ценность</a>
+                <a href="#faq" class="hover:text-zinc-950">FAQ</a>
+                <a href="#contacts" class="hover:text-zinc-950">Контакты</a>
             </nav>
 
-            <div class="hidden md:flex items-center">
-                <a href="#form" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-white bg-zinc-900 rounded-full hover:bg-zinc-800 transition-all shadow-sm hover:shadow active:scale-95">
-                    Отправить заявку
-                </a>
-            </div>
+            <a href="#form" class="hidden md:inline-flex px-5 py-2.5 text-sm font-medium text-white bg-zinc-900 rounded-full hover:bg-zinc-800">
+                Отправить заявку
+            </a>
 
-            <button id="menu-btn" class="md:hidden p-2 text-zinc-700 hover:text-zinc-950 focus:outline-none" aria-label="Toggle Menu">
+            <button id="menu-btn" class="md:hidden p-2 text-zinc-700" aria-label="Открыть меню">
                 <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-zinc-200 px-6 py-6 space-y-4 text-base font-medium">
-            <a href="#services" class="block text-zinc-700 hover:text-zinc-950 mobile-link">Услуги</a>
-            <a href="#process" class="block text-zinc-700 hover:text-zinc-950 mobile-link">Процесс</a>
-            <a href="#cases" class="block text-zinc-700 hover:text-zinc-950 mobile-link">Кейсы</a>
-            <a href="#comparison" class="block text-zinc-700 hover:text-zinc-950 mobile-link">Сравнение ценности</a>
-            <a href="#faq" class="block text-zinc-700 hover:text-zinc-950 mobile-link">FAQ</a>
-            <a href="#contacts" class="block text-zinc-700 hover:text-zinc-950 mobile-link">Контакты</a>
-            <div class="pt-4 border-t border-zinc-100">
-                <a href="#form" class="block w-full text-center py-3 px-4 text-sm font-medium text-white bg-zinc-900 rounded-xl mobile-link">
-                    Отправить заявку
-                </a>
-            </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-zinc-200 px-6 py-6 space-y-4">
+            <a href="#services" class="block mobile-link">Услуги</a>
+            <a href="#process" class="block mobile-link">Процесс</a>
+            <a href="#cases" class="block mobile-link">Кейсы</a>
+            <a href="#comparison" class="block mobile-link">Ценность</a>
+            <a href="#faq" class="block mobile-link">FAQ</a>
+            <a href="#contacts" class="block mobile-link">Контакты</a>
+            <a href="#form" class="block text-center py-3 text-white bg-zinc-900 rounded-xl mobile-link">
+                Отправить заявку
+            </a>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 bg-grid-pattern overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 bg-grid-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-zinc-100 border border-zinc-200 mb-8">
-                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span class="text-xs font-semibold uppercase tracking-wider text-zinc-700">Креативное & Маркетинговое Агентство</span>
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                <span class="text-xs font-semibold uppercase tracking-wider text-zinc-700">
+                    Креативное & Маркетинговое Агентство
+                </span>
             </div>
 
             <h1 class="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-zinc-900 leading-[1.08] max-w-5xl">
-                Комплексный маркетинг и упаковка для <span class="underline decoration-zinc-300 underline-offset-8">лидеров рынка</span>.
+                Комплексный маркетинг и упаковка для
+                <span class="underline decoration-zinc-300 underline-offset-8">лидеров рынка</span>.
             </h1>
 
-            <p class="mt-8 text-lg sm:text-xl text-zinc-600 max-w-2xl font-normal leading-relaxed">
-                Мы создаем институциональные бренды, выстраиваем автоматизированные B2B-продажи и помогаем выигрывать крупные тендеры.
+            <p class="mt-8 text-lg sm:text-xl text-zinc-600 max-w-2xl leading-relaxed">
+                Мы создаём сильную упаковку, выстраиваем B2B-продажи и помогаем компаниям повышать шансы на победу в крупных тендерах.
             </p>
 
-            <div class="mt-10 flex flex-col sm:flex-row gap-4 sm:items-center">
-                <a href="#form" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-zinc-900 rounded-full hover:bg-zinc-800 transition-all shadow-md hover:shadow-lg group">
-                    <span>Отправить заявку</span>
-                    <i data-lucide="arrow-up-right" class="w-5 h-5 ml-2 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+            <div class="mt-10 flex flex-col sm:flex-row gap-4">
+                <a href="#form" class="inline-flex items-center justify-center px-8 py-4 font-semibold text-white bg-zinc-900 rounded-full hover:bg-zinc-800">
+                    Отправить заявку
+                    <i data-lucide="arrow-up-right" class="w-5 h-5 ml-2"></i>
                 </a>
-                <a href="#comparison" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-zinc-800 bg-white border border-zinc-200 rounded-full hover:bg-zinc-50 hover:border-zinc-300 transition-all">
-                     Сравнить ценность услуг
+
+                <a href="#comparison" class="inline-flex items-center justify-center px-8 py-4 font-semibold text-zinc-800 bg-white border border-zinc-200 rounded-full hover:bg-zinc-50">
+                    Сравнить ценность услуг
                 </a>
             </div>
 
-            <div class="mt-20 pt-10 border-t border-zinc-200/80 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="mt-20 pt-10 border-t border-zinc-200 grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                    <div class="font-display text-3xl sm:text-4xl font-extrabold text-zinc-900">×3.4</div>
-                    <div class="text-sm text-zinc-500 mt-1">Средний рост ROMI клиентов</div>
+                    <div class="font-display text-3xl font-extrabold">Фокус на ROI</div>
+                    <div class="text-sm text-zinc-500 mt-1">Оцениваем маркетинг по бизнес-показателям</div>
                 </div>
+
                 <div>
-                    <div class="font-display text-3xl sm:text-4xl font-extrabold text-zinc-900">2.2 млрд ₽</div>
-                    <div class="text-sm text-zinc-500 mt-1">Привлеченная выручка</div>
+                    <div class="font-display text-3xl font-extrabold">B2B & Тендеры</div>
+                    <div class="text-sm text-zinc-500 mt-1">Работаем на выручку и заключённые сделки</div>
                 </div>
+
                 <div>
-                    <div class="font-display text-3xl sm:text-4xl font-extrabold text-zinc-900">&lt; 24 ч</div>
-                    <div class="text-sm text-zinc-500 mt-1">Запуск первичного аудита</div>
+                    <div class="font-display text-3xl font-extrabold">По согласованию</div>
+                    <div class="text-sm text-zinc-500 mt-1">Начинаем аудит после уточнения задачи</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SERVICES SECTION -->
-    <section id="services" class="py-24 bg-white border-y border-zinc-200/60">
+    <section id="services" class="py-24 bg-white border-y border-zinc-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
                 <div>
                     <span class="text-xs font-bold uppercase tracking-widest text-zinc-400">Наши компетенции</span>
-                    <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-zinc-900 mt-2">
+                    <h2 class="text-3xl sm:text-5xl font-display font-extrabold mt-2">
                         Каталог услуг и стоимость
                     </h2>
                 </div>
-                <p class="mt-4 md:mt-0 text-zinc-600 max-w-md text-sm sm:text-base">
-                    Прозрачное ценообразование и прогнозируемый результат для каждой задачи вашего бизнеса.
+
+                <p class="mt-4 md:mt-0 text-zinc-600 max-w-md">
+                    Прозрачная стоимость и понятный состав работ для каждой задачи вашего бизнеса.
                 </p>
             </div>
 
             <div class="space-y-4 max-w-5xl mx-auto">
-                <!-- Категории услуг остаются без изменений -->
-                
-                <details class="group bg-zinc-50 rounded-2xl border border-zinc-200/80 transition-all duration-200 open:bg-white open:shadow-sm" open>
-                    <summary class="flex items-center justify-between p-6 cursor-pointer select-none font-bold text-zinc-900 text-lg md:text-xl">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 rounded-xl bg-white border border-zinc-200 flex items-center justify-center text-zinc-900 shadow-sm shrink-0">
-                                <i data-lucide="briefcase" class="w-6 h-6"></i>
-                            </div>
-                            <span>Тендерный маркетинг и «Упаковка»</span>
-                        </div>
-                        <div class="w-8 h-8 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-500 group-open:bg-zinc-900 group-open:text-white transition-colors shrink-0 ml-4">
-                            <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300 group-open:rotate-180"></i>
-                        </div>
+                <details class="group bg-zinc-50 rounded-2xl border border-zinc-200" open>
+                    <summary class="flex items-center justify-between p-6 cursor-pointer font-bold text-lg md:text-xl">
+                        <span>Тендерный маркетинг и «Упаковка»</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5"></i>
                     </summary>
-                    <div class="px-6 pb-6 pt-2 border-t border-zinc-200/60 divide-y divide-zinc-200/60">
+
+                    <div class="px-6 pb-6 border-t border-zinc-200 divide-y">
                         <div class="py-5">
-                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-2">
-                                <h4 class="font-bold text-zinc-900 text-base md:text-lg">Разработка Executive Profile (Инвестиционный паспорт)</h4>
-                                <div class="text-left sm:text-right shrink-0">
-                                    <div class="text-base md:text-lg font-bold text-emerald-600">От 170 000 ₽</div>
-                                </div>
+                            <div class="flex flex-col sm:flex-row sm:justify-between gap-2">
+                                <h3 class="font-bold">Разработка Executive Profile</h3>
+                                <div class="font-bold text-emerald-600">От 170 000 ₽</div>
                             </div>
-                            <p class="text-sm text-zinc-600">Создание фундаментального презентационного документа для ЛПР и СБ крупных заказчиков: финансовые показатели, мощности, лицензии, ключевая команда.</p>
+
+                            <p class="text-sm text-zinc-600 mt-2">
+                                Создание презентационного документа для руководителей и служб безопасности крупных заказчиков.
+                            </p>
                         </div>
-                        
+
                         <div class="py-5">
-                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-2">
-                                <h4 class="font-bold text-zinc-900 text-base md:text-lg">Оцифровка и оформление кейсов (Technical Case Studies)</h4>
-                                <div class="text-left sm:text-right shrink-0">
-                                    <div class="text-base md:text-lg font-bold text-emerald-600">От 110 000 ₽</div>
-                                </div>
+                            <div class="flex flex-col sm:flex-row sm:justify-between gap-2">
+                                <h3 class="font-bold">Оцифровка и оформление кейсов</h3>
+                                <div class="font-bold text-emerald-600">От 110 000 ₽</div>
                             </div>
-                            <p class="text-sm text-zinc-600">Детальная упаковка выполненных объектов с фото/видео, объёмами работ, инженерными решениями, сроками и отзывами.</p>
+
+                            <p class="text-sm text-zinc-600 mt-2">
+                                Упаковка выполненных проектов с фотографиями, цифрами, сроками и отзывами.
+                            </p>
                         </div>
                     </div>
                 </details>
 
-                <details class="group bg-zinc-50 rounded-2xl border border-zinc-200/80 transition-all duration-200 open:bg-white open:shadow-sm">
-                    <summary class="flex items-center justify-between p-6 cursor-pointer select-none font-bold text-zinc-900 text-lg md:text-xl">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 rounded-xl bg-white border border-zinc-200 flex items-center justify-center text-zinc-900 shadow-sm shrink-0">
-                                <i data-lucide="target" class="w-6 h-6"></i>
-                            </div>
-                            <span>ABM-маркетинг & Репутация (SERM)</span>
-                        </div>
-                        <div class="w-8 h-8 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-500 group-open:bg-zinc-900 group-open:text-white transition-colors shrink-0 ml-4">
-                            <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300 group-open:rotate-180"></i>
-                        </div>
+                <details class="group bg-zinc-50 rounded-2xl border border-zinc-200">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer font-bold text-lg md:text-xl">
+                        <span>ABM-маркетинг & Репутация</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5"></i>
                     </summary>
-                    <div class="px-6 pb-6 pt-2 border-t border-zinc-200/60 divide-y divide-zinc-200/60">
+
+                    <div class="px-6 pb-6 border-t border-zinc-200 divide-y">
                         <div class="py-5">
-                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-2">
-                                <h4 class="font-bold text-zinc-900 text-base md:text-lg">Исследование и маппинг целевых аккаунтов (Оргструктура ЛПР)</h4>
-                                <div class="text-left sm:text-right shrink-0">
-                                    <div class="text-base md:text-lg font-bold text-emerald-600">От 150 000 ₽</div>
-                                </div>
+                            <div class="flex flex-col sm:flex-row sm:justify-between gap-2">
+                                <h3 class="font-bold">Маппинг целевых компаний и ЛПР</h3>
+                                <div class="font-bold text-emerald-600">От 150 000 ₽</div>
                             </div>
-                            <p class="text-sm text-zinc-600">Составление детальной карты лиц, принимающих решения в целевых корпорациях.</p>
+
+                            <p class="text-sm text-zinc-600 mt-2">
+                                Составление карты лиц, принимающих решения в целевых компаниях.
+                            </p>
                         </div>
 
                         <div class="py-5">
-                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-2">
-                                <h4 class="font-bold text-zinc-900 text-base md:text-lg">Управление репутацией в поисковой выдаче (SERM)</h4>
-                                <div class="text-left sm:text-right shrink-0">
-                                    <div class="text-base md:text-lg font-bold text-emerald-600">От 120 000 ₽</div>
-                                </div>
+                            <div class="flex flex-col sm:flex-row sm:justify-between gap-2">
+                                <h3 class="font-bold">Управление репутацией в поиске</h3>
+                                <div class="font-bold text-emerald-600">От 120 000 ₽</div>
                             </div>
-                            <p class="text-sm text-zinc-600">Аудит инфополя, вытеснение негатива, формирование позитивной выдачи Google/Яндекс.</p>
+
+                            <p class="text-sm text-zinc-600 mt-2">
+                                Анализ поисковой выдачи и работа с репутацией компании.
+                            </p>
                         </div>
                     </div>
                 </details>
 
-                <details class="group bg-zinc-50 rounded-2xl border border-zinc-200/80 transition-all duration-200 open:bg-white open:shadow-sm">
-                    <summary class="flex items-center justify-between p-6 cursor-pointer select-none font-bold text-zinc-900 text-lg md:text-xl">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 rounded-xl bg-white border border-zinc-200 flex items-center justify-center text-zinc-900 shadow-sm shrink-0">
-                                <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
-                            </div>
-                            <span>CRM и автоматизация B2B-продаж</span>
-                        </div>
-                        <div class="w-8 h-8 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-500 group-open:bg-zinc-900 group-open:text-white transition-colors shrink-0 ml-4">
-                            <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300 group-open:rotate-180"></i>
-                        </div>
+                <details class="group bg-zinc-50 rounded-2xl border border-zinc-200">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer font-bold text-lg md:text-xl">
+                        <span>CRM и автоматизация B2B-продаж</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5"></i>
                     </summary>
-                    <div class="px-6 pb-6 pt-2 border-t border-zinc-200/60 divide-y divide-zinc-200/60">
+
+                    <div class="px-6 pb-6 border-t border-zinc-200">
                         <div class="py-5">
-                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-2">
-                                <h4 class="font-bold text-zinc-900 text-base md:text-lg">Внедрение и настройка отраслевой CRM (Тендеры/B2B)</h4>
-                                <div class="text-left sm:text-right shrink-0">
-                                    <div class="text-base md:text-lg font-bold text-emerald-600">От 360 000 ₽</div>
-                                </div>
+                            <div class="flex flex-col sm:flex-row sm:justify-between gap-2">
+                                <h3 class="font-bold">Внедрение и настройка отраслевой CRM</h3>
+                                <div class="font-bold text-emerald-600">От 360 000 ₽</div>
                             </div>
-                            <p class="text-sm text-zinc-600">Оцифровка воронки долгих B2B-продаж и участия в тендерах, интеграция с сайтом и площадками.</p>
+
+                            <p class="text-sm text-zinc-600 mt-2">
+                                Настройка воронки долгих B2B-продаж и участия в тендерах.
+                            </p>
                         </div>
                     </div>
                 </details>
 
-                <details class="group bg-zinc-50 rounded-2xl border border-zinc-200/80 transition-all duration-200 open:bg-white open:shadow-sm">
-                    <summary class="flex items-center justify-between p-6 cursor-pointer select-none font-bold text-zinc-900 text-lg md:text-xl">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 rounded-xl bg-white border border-zinc-200 flex items-center justify-center text-zinc-900 shadow-sm shrink-0">
-                                <i data-lucide="laptop" class="w-6 h-6"></i>
-                            </div>
-                            <span>Digital-инфраструктура & Web</span>
-                        </div>
-                        <div class="w-8 h-8 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-500 group-open:bg-zinc-900 group-open:text-white transition-colors shrink-0 ml-4">
-                            <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300 group-open:rotate-180"></i>
-                        </div>
+                <details class="group bg-zinc-50 rounded-2xl border border-zinc-200">
+                    <summary class="flex items-center justify-between p-6 cursor-pointer font-bold text-lg md:text-xl">
+                        <span>Digital-инфраструктура & Web</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5"></i>
                     </summary>
-                    <div class="px-6 pb-6 pt-2 border-t border-zinc-200/60 divide-y divide-zinc-200/60">
+
+                    <div class="px-6 pb-6 border-t border-zinc-200">
                         <div class="py-5">
-                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-2">
-                                <h4 class="font-bold text-zinc-900 text-base md:text-lg">Корпоративный сайт «институционального» уровня</h4>
-                                <div class="text-left sm:text-right shrink-0">
-                                    <div class="text-base md:text-lg font-bold text-emerald-600">От 500 000 ₽</div>
-                                </div>
+                            <div class="flex flex-col sm:flex-row sm:justify-between gap-2">
+                                <h3 class="font-bold">Корпоративный сайт</h3>
+                                <div class="font-bold text-emerald-600">От 500 000 ₽</div>
                             </div>
-                            <p class="text-sm text-zinc-600">Проектирование строгого, высоконадежного сайта компании с акцентом на масштабы.</p>
+
+                            <p class="text-sm text-zinc-600 mt-2">
+                                Проектирование строгого и надёжного сайта компании.
+                            </p>
                         </div>
                     </div>
                 </details>
@@ -328,486 +278,356 @@
         </div>
     </section>
 
-    <!-- WORK PROCESS SECTION -->
     <section id="process" class="py-24 bg-zinc-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-20">
+            <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-xs font-bold uppercase tracking-widest text-zinc-400">Методология Lulu</span>
-                <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-zinc-900 mt-2">
+                <h2 class="text-3xl sm:text-5xl font-display font-extrabold mt-2">
                     Как мы приводим к результату
                 </h2>
-                <p class="mt-4 text-zinc-600">
-                    Системный и прозрачный процесс работы, исключающий хаотичные действия.
-                </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="relative bg-white p-8 rounded-2xl border border-zinc-200">
-                    <div class="font-display text-5xl font-extrabold text-zinc-200 mb-4">01</div>
-                    <h3 class="text-lg font-bold text-zinc-900 mb-2">Аудит</h3>
-                    <p class="text-sm text-zinc-600 leading-relaxed">
-                        Изучаем экономику маркетинга и рекламы, слабые места воронок и точки перерасхода бюджета.
-                    </p>
+                <div class="bg-white p-8 rounded-2xl border border-zinc-200">
+                    <div class="text-5xl font-extrabold text-zinc-200 mb-4">01</div>
+                    <h3 class="font-bold mb-2">Аудит</h3>
+                    <p class="text-sm text-zinc-600">Изучаем текущую ситуацию и слабые места.</p>
                 </div>
 
-                <div class="relative bg-white p-8 rounded-2xl border border-zinc-200">
-                    <div class="font-display text-5xl font-extrabold text-zinc-200 mb-4">02</div>
-                    <h3 class="text-lg font-bold text-zinc-900 mb-2">Стратегия и KPI</h3>
-                    <p class="text-sm text-zinc-600 leading-relaxed">
-                        Фиксируем целевые показатели и согласовываем медиаплан.
-                    </p>
+                <div class="bg-white p-8 rounded-2xl border border-zinc-200">
+                    <div class="text-5xl font-extrabold text-zinc-200 mb-4">02</div>
+                    <h3 class="font-bold mb-2">Стратегия</h3>
+                    <p class="text-sm text-zinc-600">Определяем задачи, план работы и показатели.</p>
                 </div>
 
-                <div class="relative bg-white p-8 rounded-2xl border border-zinc-200">
-                    <div class="font-display text-5xl font-extrabold text-zinc-200 mb-4">03</div>
-                    <h3 class="text-lg font-bold text-zinc-900 mb-2">Запуск & Тесты</h3>
-                    <p class="text-sm text-zinc-600 leading-relaxed">
-                        Разворачиваем рекламные кампании и анализируем первые связки креативов.
-                    </p>
+                <div class="bg-white p-8 rounded-2xl border border-zinc-200">
+                    <div class="text-5xl font-extrabold text-zinc-200 mb-4">03</div>
+                    <h3 class="font-bold mb-2">Реализация</h3>
+                    <p class="text-sm text-zinc-600">Создаём материалы и настраиваем инструменты.</p>
                 </div>
 
-                <div class="relative bg-white p-8 rounded-2xl border border-zinc-200">
-                    <div class="font-display text-5xl font-extrabold text-zinc-200 mb-4">04</div>
-                    <h3 class="text-lg font-bold text-zinc-900 mb-2">Масштабирование</h3>
-                    <p class="text-sm text-zinc-600 leading-relaxed">
-                        Оптимизация эффективности каналов и увеличение прибыли в рабочих связках.
-                    </p>
+                <div class="bg-white p-8 rounded-2xl border border-zinc-200">
+                    <div class="text-5xl font-extrabold text-zinc-200 mb-4">04</div>
+                    <h3 class="font-bold mb-2">Улучшение</h3>
+                    <p class="text-sm text-zinc-600">Анализируем результат и вносим изменения.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CASE STUDIES SECTION -->
-    <section id="cases" class="py-24 bg-white border-t border-zinc-200/60">
+    <section id="cases" class="py-24 bg-white border-t border-zinc-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
-                <div>
-                    <span class="text-xs font-bold uppercase tracking-widest text-zinc-400">Результаты работы</span>
-                    <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-zinc-900 mt-2">
-                        Избранные кейсы
-                    </h2>
-                </div>
-            </div>
+            <span class="text-xs font-bold uppercase tracking-widest text-zinc-400">Результаты работы</span>
+            <h2 class="text-3xl sm:text-5xl font-display font-extrabold mt-2 mb-16">
+                Избранные кейсы
+            </h2>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <div class="bg-zinc-50 rounded-2xl border border-zinc-200 overflow-hidden flex flex-col justify-between">
+                <article class="bg-zinc-50 rounded-2xl border border-zinc-200 overflow-hidden">
                     <div class="p-8">
-                        <div class="flex items-center justify-between text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-4">
-                            <span>Премиальная Недвижимость</span>
-                            <span>Девелопмент</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-zinc-900 mb-3">
-                            Рост целевых обращений на +180% при снижении CPL на 32%
+                        <div class="text-xs font-semibold text-zinc-500 uppercase mb-4">Девелопмент</div>
+                        <h3 class="text-xl font-bold mb-3">
+                            Рост целевых обращений на 180% при снижении стоимости заявки
                         </h3>
-                        <p class="text-sm text-zinc-600 leading-relaxed mb-6">
-                            Внедрили гибкую связку гиперлокального таргетинга, квалификации лидов через квиз-механики и сквозную CRM-аналитику.
+                        <p class="text-sm text-zinc-600">
+                            Настроили рекламу, квалификацию заявок и CRM-аналитику.
                         </p>
                     </div>
-                    <div class="p-8 bg-zinc-100/80 border-t border-zinc-200 grid grid-cols-2 gap-4 text-center">
+
+                    <div class="p-8 bg-zinc-100 border-t grid grid-cols-2 text-center">
                         <div>
-                            <div class="font-display text-2xl font-bold text-emerald-600">1.4 млрд ₽</div>
-                            <div class="text-xs text-zinc-500">Продаж с рекламы</div>
+                            <div class="text-2xl font-bold text-emerald-600">1,4 млрд ₽</div>
+                            <div class="text-xs text-zinc-500">Продаж</div>
                         </div>
+
                         <div>
-                            <div class="font-display text-2xl font-bold text-zinc-900">410%</div>
+                            <div class="text-2xl font-bold">410%</div>
                             <div class="text-xs text-zinc-500">ROMI</div>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="bg-zinc-50 rounded-2xl border border-zinc-200 overflow-hidden flex flex-col justify-between">
+                <article class="bg-zinc-50 rounded-2xl border border-zinc-200 overflow-hidden">
                     <div class="p-8">
-                        <div class="flex items-center justify-between text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-4">
-                            <span>B2B SaaS Платформа</span>
-                            <span>IT & Software</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-zinc-900 mb-3">
-                            Масштабирование платного трафика до 8 500+ демо-заявок в месяц
+                        <div class="text-xs font-semibold text-zinc-500 uppercase mb-4">B2B SaaS</div>
+                        <h3 class="text-xl font-bold mb-3">
+                            Масштабирование рекламы до 8 500 демо-заявок в месяц
                         </h3>
-                        <p class="text-sm text-zinc-600 leading-relaxed mb-6">
-                            Оптимизировали контекстные кампании в Yandex, внедрили автоматический scoring лидов и Account-Based ретаргетинг.
+                        <p class="text-sm text-zinc-600">
+                            Оптимизировали рекламу и автоматизировали оценку заявок.
                         </p>
                     </div>
-                    <div class="p-8 bg-zinc-100/80 border-t border-zinc-200 grid grid-cols-2 gap-4 text-center">
+
+                    <div class="p-8 bg-zinc-100 border-t grid grid-cols-2 text-center">
                         <div>
-                            <div class="font-display text-2xl font-bold text-emerald-600">-40%</div>
-                            <div class="text-xs text-zinc-500">Стоимость Demo</div>
+                            <div class="text-2xl font-bold text-emerald-600">−40%</div>
+                            <div class="text-xs text-zinc-500">Стоимость заявки</div>
                         </div>
+
                         <div>
-                            <div class="font-display text-2xl font-bold text-zinc-900">3.2×</div>
+                            <div class="text-2xl font-bold">3,2×</div>
                             <div class="text-xs text-zinc-500">Рост ARR</div>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="bg-zinc-50 rounded-2xl border border-zinc-200 overflow-hidden flex flex-col justify-between">
+                <article class="bg-zinc-50 rounded-2xl border border-zinc-200 overflow-hidden">
                     <div class="p-8">
-                        <div class="flex items-center justify-between text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-4">
-                            <span>E-Commerce Ритейл</span>
-                            <span>Fashion & Luxury</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-zinc-900 mb-3">
-                            Увеличение онлайн-выручки бренда за 5 месяцев в 2.8 раза
+                        <div class="text-xs font-semibold text-zinc-500 uppercase mb-4">E-commerce</div>
+                        <h3 class="text-xl font-bold mb-3">
+                            Рост онлайн-выручки в 2,8 раза за пять месяцев
                         </h3>
-                        <p class="text-sm text-zinc-600 leading-relaxed mb-6">
-                            Пересобрали перформанс-микс, настроили смарт-товарные кампании и оптимизировали конверсию чекаута.
+                        <p class="text-sm text-zinc-600">
+                            Пересобрали рекламные кампании и улучшили оформление заказа.
                         </p>
                     </div>
-                    <div class="p-8 bg-zinc-100/80 border-t border-zinc-200 grid grid-cols-2 gap-4 text-center">
+
+                    <div class="p-8 bg-zinc-100 border-t grid grid-cols-2 text-center">
                         <div>
-                            <div class="font-display text-2xl font-bold text-emerald-600">+185%</div>
+                            <div class="text-2xl font-bold text-emerald-600">+185%</div>
                             <div class="text-xs text-zinc-500">Выручка</div>
                         </div>
+
                         <div>
-                            <div class="font-display text-2xl font-bold text-zinc-900">520%</div>
-                            <div class="text-xs text-zinc-500">ДРР в норме</div>
+                            <div class="text-2xl font-bold">520%</div>
+                            <div class="text-xs text-zinc-500">ROAS</div>
                         </div>
                     </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="comparison" class="py-24 bg-zinc-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <span class="text-xs font-bold uppercase tracking-widest text-emerald-400">Сравнительный анализ</span>
+            <h2 class="text-3xl sm:text-5xl font-display font-extrabold mt-2">
+                Как снимаем ключевые барьеры сделок
+            </h2>
+
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-zinc-800 rounded-2xl p-8">
+                    <p class="font-semibold mb-6">«Мы вас не знаем»</p>
+                    <p class="text-sm text-zinc-300">
+                        Подготавливаем документы и материалы, которые подтверждают опыт компании.
+                    </p>
+                </div>
+
+                <div class="bg-zinc-800 rounded-2xl p-8">
+                    <p class="font-semibold mb-6">«Справитесь ли вы с объёмом?»</p>
+                    <p class="text-sm text-zinc-300">
+                        Показываем реализованные проекты, цифры, сроки и отзывы.
+                    </p>
+                </div>
+
+                <div class="bg-zinc-800 rounded-2xl p-8">
+                    <p class="font-semibold mb-6">«Долгое согласование»</p>
+                    <p class="text-sm text-zinc-300">
+                        Готовим понятные материалы для разных участников сделки.
+                    </p>
+                </div>
+
+                <div class="bg-zinc-800 rounded-2xl p-8">
+                    <p class="font-semibold mb-6">«Заявки теряются»</p>
+                    <p class="text-sm text-zinc-300">
+                        Настраиваем прозрачную воронку продаж и CRM.
+                    </p>
+                </div>
+
+                <div class="bg-zinc-800 rounded-2xl p-8">
+                    <p class="font-semibold mb-6">«Сайт устарел»</p>
+                    <p class="text-sm text-zinc-300">
+                        Создаём современное и надёжное представление компании.
+                    </p>
+                </div>
+
+                <div class="bg-zinc-800 rounded-2xl p-8">
+                    <p class="font-semibold mb-6">«Конкуренты дешевле»</p>
+                    <p class="text-sm text-zinc-300">
+                        Помогаем объяснить стоимость через опыт, гарантии и снижение рисков.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- COMPARATIVE VALUE TABLE SECTION (CARD GRID) -->
-    <section id="comparison" class="py-24 bg-zinc-900 text-white relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="max-w-3xl mb-16">
-                <span class="text-xs font-bold uppercase tracking-widest text-emerald-400">Сравнительный анализ</span>
-                <h2 class="text-3xl sm:text-5xl font-display font-extrabold mt-2 text-white">
-                    Как снимаем ключевые барьеры сделок
-                </h2>
-                <p class="mt-4 text-zinc-400 text-lg">
-                    Переводим сомнения в неоспоримые преимущества вашей компании с помощью системной упаковки.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <div class="bg-zinc-800/40 rounded-2xl p-6 md:p-8 border border-zinc-700/50 flex flex-col hover:bg-zinc-800/80 transition-colors">
-                    <div class="mb-8">
-                        <div class="flex items-center space-x-2 mb-4 text-zinc-400">
-                            <i data-lucide="x" class="w-5 h-5 text-rose-500"></i>
-                            <span class="text-xs font-bold uppercase tracking-wider text-rose-500/80">Барьер заказчика</span>
-                        </div>
-                        <p class="text-lg font-semibold text-zinc-100">«Мы вас не знаем / Нет доверия к компании»</p>
-                    </div>
-                    
-                    <div class="mt-auto pt-6 border-t border-zinc-700/50">
-                        <div class="flex items-center space-x-2 mb-4 text-emerald-400">
-                            <i data-lucide="check" class="w-5 h-5"></i>
-                            <span class="text-xs font-bold uppercase tracking-wider">Решение Lulu</span>
-                        </div>
-                        <p class="text-zinc-300 text-sm leading-relaxed">
-                            Инвестиционный паспорт и статус надежного партнера, проходящие комплаенс службы безопасности (СБ).
-                        </p>
-                    </div>
-                </div>
-
-                <div class="bg-zinc-800/40 rounded-2xl p-6 md:p-8 border border-zinc-700/50 flex flex-col hover:bg-zinc-800/80 transition-colors">
-                    <div class="mb-8">
-                        <div class="flex items-center space-x-2 mb-4 text-zinc-400">
-                            <i data-lucide="x" class="w-5 h-5 text-rose-500"></i>
-                            <span class="text-xs font-bold uppercase tracking-wider text-rose-500/80">Барьер заказчика</span>
-                        </div>
-                        <p class="text-lg font-semibold text-zinc-100">«А справитесь ли вы с нашими объемами?»</p>
-                    </div>
-                    
-                    <div class="mt-auto pt-6 border-t border-zinc-700/50">
-                        <div class="flex items-center space-x-2 mb-4 text-emerald-400">
-                            <i data-lucide="check" class="w-5 h-5"></i>
-                            <span class="text-xs font-bold uppercase tracking-wider">Решение Lulu</span>
-                        </div>
-                        <p class="text-zinc-300 text-sm leading-relaxed">
-                            Документальные доказательства успешно реализованных сложных проектов с фото, цифрами и отзывами.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="bg-zinc-800/40 rounded-2xl p-6 md:p-8 border border-zinc-700/50 flex flex-col hover:bg-zinc-800/80 transition-colors">
-                    <div class="mb-8">
-                        <div class="flex items-center space-x-2 mb-4 text-zinc-400">
-                            <i data-lucide="x" class="w-5 h-5 text-rose-500"></i>
-                            <span class="text-xs font-bold uppercase tracking-wider text-rose-500/80">Барьер заказчика</span>
-                        </div>
-                        <p class="text-lg font-semibold text-zinc-100">«Долгое согласование / ЛПР уходит в тень»</p>
-                    </div>
-                    
-                    <div class="mt-auto pt-6 border-t border-zinc-700/50">
-                        <div class="flex items-center space-x-2 mb-4 text-emerald-400">
-                            <i data-lucide="check" class="w-5 h-5"></i>
-                            <span class="text-xs font-bold uppercase tracking-wider">Решение Lulu</span>
-                        </div>
-                        <p class="text-zinc-300 text-sm leading-relaxed">
-                            Персонализированные предложения под конкретных лиц, принимающих решения, и маппинг оргструктуры.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="bg-zinc-800/40 rounded-2xl p-6 md:p-8 border border-zinc-700/50 flex flex-col hover:bg-zinc-800/80 transition-colors">
-                    <div class="mb-8">
-                        <div class="flex items-center space-x-2 mb-4 text-zinc-400">
-                            <i data-lucide="x" class="w-5 h-5 text-rose-500"></i>
-                            <span class="text-xs font-bold uppercase tracking-wider text-rose-500/80">Барьер заказчика</span>
-                        </div>
-                        <p class="text-lg font-semibold text-zinc-100">«Хаос в процессах и потеря заявок»</p>
-                    </div>
-                    
-                    <div class="mt-auto pt-6 border-t border-zinc-700/50">
-                        <div class="flex items-center space-x-2 mb-4 text-emerald-400">
-                            <i data-lucide="check" class="w-5 h-5"></i>
-                            <span class="text-xs font-bold uppercase tracking-wider">Решение Lulu</span>
-                        </div>
-                        <p class="text-zinc-300 text-sm leading-relaxed">
-                            Прозрачная воронка долгих продаж, исключающая человеческий фактор и потерю договоренностей на этапах тендера.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="bg-zinc-800/40 rounded-2xl p-6 md:p-8 border border-zinc-700/50 flex flex-col hover:bg-zinc-800/80 transition-colors">
-                    <div class="mb-8">
-                        <div class="flex items-center space-x-2 mb-4 text-zinc-400">
-                            <i data-lucide="x" class="w-5 h-5 text-rose-500"></i>
-                            <span class="text-xs font-bold uppercase tracking-wider text-rose-500/80">Барьер заказчика</span>
-                        </div>
-                        <p class="text-lg font-semibold text-zinc-100">«Сайт не актуальный»</p>
-                    </div>
-                    
-                    <div class="mt-auto pt-6 border-t border-zinc-700/50">
-                        <div class="flex items-center space-x-2 mb-4 text-emerald-400">
-                            <i data-lucide="check" class="w-5 h-5"></i>
-                            <span class="text-xs font-bold uppercase tracking-wider">Решение Lulu</span>
-                        </div>
-                        <p class="text-zinc-300 text-sm leading-relaxed">
-                            Создание имиджа стабильной и современной корпорации, вызывающей уважение у топ-менеджмента заказчика.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="bg-zinc-800/40 rounded-2xl p-6 md:p-8 border border-zinc-700/50 flex flex-col hover:bg-zinc-800/80 transition-colors">
-                    <div class="mb-8">
-                        <div class="flex items-center space-x-2 mb-4 text-zinc-400">
-                            <i data-lucide="x" class="w-5 h-5 text-rose-500"></i>
-                            <span class="text-xs font-bold uppercase tracking-wider text-rose-500/80">Барьер заказчика</span>
-                        </div>
-                        <p class="text-lg font-semibold text-zinc-100">«Конкуренты демпингуют, как защитить свою цену?»</p>
-                    </div>
-                    
-                    <div class="mt-auto pt-6 border-t border-zinc-700/50">
-                        <div class="flex items-center space-x-2 mb-4 text-emerald-400">
-                            <i data-lucide="check" class="w-5 h-5"></i>
-                            <span class="text-xs font-bold uppercase tracking-wider">Решение Lulu</span>
-                        </div>
-                        <p class="text-zinc-300 text-sm leading-relaxed">
-                            Обоснование стоимости. Мы смещаем фокус с цифр в смете на надежность, гарантии и снижение рисков заказчика.
-                        </p>
-                    </div>
-                </div>
-                
-            </div>
-            
-            <div class="mt-16 flex justify-center">
-                <a href="#form" class="inline-flex items-center px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold rounded-2xl transition-all shadow-[0_0_20px_rgba(5,150,105,0.3)] hover:shadow-[0_0_30px_rgba(5,150,105,0.5)] space-x-3 group">
-                    <span>Усилить позиции компании</span>
-                    <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section id="faq" class="py-24 bg-white border-b border-zinc-200/60">
+    <section id="faq" class="py-24 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <span class="text-xs font-bold uppercase tracking-widest text-zinc-400">Вопросы и ответы</span>
-                <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-zinc-900 mt-2">
+                <h2 class="text-3xl sm:text-4xl font-display font-extrabold mt-2">
                     Часто задаваемые вопросы
                 </h2>
             </div>
 
             <div class="space-y-4">
                 <div class="border border-zinc-200 rounded-2xl overflow-hidden">
-                    <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
-                        <span class="pr-4">У нас сложная и специфическая ниша. Как вы разберетесь в процессах без профильного образования?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 transition-transform shrink-0"></i>
+                    <button class="accordion-header w-full text-left p-6 flex justify-between items-center font-bold">
+                        <span>Как вы разберётесь в нашей сложной нише?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5"></i>
                     </button>
-                    <div class="accordion-content bg-zinc-50/50 px-6">
-                        <div class="py-4 text-sm text-zinc-600 leading-relaxed">
-                            Мы не придумываем смыслы за вас, а выступаем «архитекторами и оцифровщиками» вашей экспертизы. За каждым проектом закрепляется бизнес-аналитик и интервьюер. Мы проводим серии коротких глубинным интервью с вашими главными инженерами, техническими директорами и сейлзами, вытаскиваем ключевые цифры, факты и технологические нюансы, а затем переводим их на язык бизнес-выгоды, понятный ЛПР и службам безопасности вашего заказчика. Все материалы проходят многоэтапное согласование с вашей технической командой.
-                        </div>
+
+                    <div class="accordion-content bg-zinc-50 px-6">
+                        <p class="py-5 text-sm text-zinc-600">
+                            Мы проводим интервью с вашими специалистами, собираем факты и переводим техническую информацию на понятный язык для заказчиков.
+                        </p>
                     </div>
                 </div>
 
                 <div class="border border-zinc-200 rounded-2xl overflow-hidden">
-                    <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
-                        <span class="pr-4">Сколько времени потребуется от наших сотрудников? Мои инженеры и так перегружены.</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 transition-transform shrink-0"></i>
+                    <button class="accordion-header w-full text-left p-6 flex justify-between items-center font-bold">
+                        <span>Сколько времени потребуется от нашей команды?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5"></i>
                     </button>
-                    <div class="accordion-content bg-zinc-50/50 px-6">
-                        <div class="py-4 text-sm text-zinc-600 leading-relaxed space-y-3">
-                            <p>Мы берем на себя 85–90% всей рутины. От вашей команды потребуется суммарно 3–5 часов на весь проект:</p>
-                            <ul class="list-disc pl-5 space-y-1">
-                                <li><strong>1 час</strong> — установочная сессия и передача исходных материалов (документы, смета, старые презентации).</li>
-                                <li><strong>2–3 часа</strong> — интервью с ключевыми экспертами по разработанному нами опроснику.</li>
-                                <li><strong>1 час</strong> — финальная приемка и внесение точечных правок.</li>
-                            </ul>
-                            <p>Вся подготовка текстов, верстка, дизайн, структуры и оцифровка остаются полностью на нашей стороне.</p>
-                        </div>
+
+                    <div class="accordion-content bg-zinc-50 px-6">
+                        <p class="py-5 text-sm text-zinc-600">
+                            Обычно требуется несколько интервью, передача исходных материалов и согласование результата.
+                        </p>
                     </div>
                 </div>
 
                 <div class="border border-zinc-200 rounded-2xl overflow-hidden">
-                    <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
-                        <span class="pr-4">У нас скоро важный конкурс. Успеем ли мы подготовить материалы за 2–3 недели?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 transition-transform shrink-0"></i>
+                    <button class="accordion-header w-full text-left p-6 flex justify-between items-center font-bold">
+                        <span>Вы гарантируете победу в тендере?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5"></i>
                     </button>
-                    <div class="accordion-content bg-zinc-50/50 px-6">
-                        <div class="py-4 text-sm text-zinc-600 leading-relaxed">
-                            Для горящих задач у нас предусмотрен формат экспресс-спринта. В этом случае мы фиксируем приоритетный пул задач (например, ключевой Executive Profile и оцифровку 2–3 самых релевантных кейсов под нишу конкретного заказчика) и выдаем готовый продукт за 10–14 рабочих дней. Параллельно вы сразу получаете интерактивные и PDF-версии для отправки СБ и ЛПР.
-                        </div>
+
+                    <div class="accordion-content bg-zinc-50 px-6">
+                        <p class="py-5 text-sm text-zinc-600">
+                            Нет. Мы помогаем устранить типовые причины отказов, подготовить материалы для квалификации и повысить вероятность выхода на переговоры.
+                        </p>
                     </div>
                 </div>
 
                 <div class="border border-zinc-200 rounded-2xl overflow-hidden">
-                    <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
-                        <span class="pr-4">Даете ли вы гарантию, что после вашей упаковки мы точно выиграем тендер?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 transition-transform shrink-0"></i>
+                    <button class="accordion-header w-full text-left p-6 flex justify-between items-center font-bold">
+                        <span>Как показывать проекты, защищённые NDA?</span>
+                        <i data-lucide="chevron-down" class="w-5 h-5"></i>
                     </button>
-                    <div class="accordion-content bg-zinc-50/50 px-6">
-                        <div class="py-4 text-sm text-zinc-600 leading-relaxed space-y-3">
-                            <p>Выиграть тендер только за счет красивой упаковки невозможно, если не устраивает коммерческое предложение или логистика — мы честны в этом вопросе. Наша услуга гарантирует <strong>устранение стоп-факторов на стороне заказчика</strong>:</p>
-                            <ol class="list-decimal pl-5 space-y-1">
-                                <li>Вы гарантированно проходите квалификационный отбор и комплаенс Службы Безопасности.</li>
-                                <li>Заказчик видит документальные доказательства вашего опыта (а не просто обещанный уровень сервиса), что нивелирует риск «отказа из-за неизвестности бренда».</li>
-                                <li>ЛПР получают понятные материалы, которые ускоряют внутрикорпоративное согласование.</li>
-                            </ol>
-                            <p>Мы гарантируем рост конверсии из заявки/подачи в допуск к переговорам и финалу.</p>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="border border-zinc-200 rounded-2xl overflow-hidden">
-                    <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
-                        <span class="pr-4">У нас подписаны NDA с клиентами. Как показать масштаб проектов без нарушений?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 transition-transform shrink-0"></i>
-                    </button>
-                    <div class="accordion-content bg-zinc-50/50 px-6">
-                        <div class="py-4 text-sm text-zinc-600 leading-relaxed space-y-3">
-                            <p>Это стандартная практика в B2B. Мы используем три проверенных механики:</p>
-                            <ul class="list-disc pl-5 space-y-1">
-                                <li><strong>Обезличивание данных:</strong> замена прямых названий брендов на категорию (например, <em>«Крупнейший ритейлер бытовой техники из ТОП-3»</em>).</li>
-                                <li><strong>Относительные показатели:</strong> использование % роста, коэффициентов и сэкономленных часов вместо раскрытия прямых финпоказателей в рублях.</li>
-                                <li><strong>Гриф «Для служебного пользования» (Executive summary):</strong> подготовка закрытых версий кейсов, которые передаются заказчику строго под подпись NDA на этапе квалификации.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="border border-zinc-200 rounded-2xl overflow-hidden">
-                    <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
-                        <span class="pr-4">Как оценить целесообразность вложений в услуги упаковки и маркетинга (ROI)?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 transition-transform shrink-0"></i>
-                    </button>
-                    <div class="accordion-content bg-zinc-50/50 px-6">
-                        <div class="py-4 text-sm text-zinc-600 leading-relaxed">
-                            В крупном B2B и тендерах стоимость даже одной выигранной сделки или контракта обычно перекрывает бюджет на маркетинг и упаковку в 5–10 раз. Без системной упаковки компания регулярно теряет контракты на миллионы рублей просто потому, что СБ или ЛПР выбрали более понятного и «наглядного» конкурента. Вложения в упаковку и CRM — это разовый капитал (актив), который работает на закрытие сделок следующие 2–3 года.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="border border-zinc-200 rounded-2xl overflow-hidden">
-                    <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
-                        <span class="pr-4">У нас сильный отдел продаж. Зачем нам тратиться на маркетинг и Executive Profile?</span>
-                        <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 transition-transform shrink-0"></i>
-                    </button>
-                    <div class="accordion-content bg-zinc-50/50 px-6">
-                        <div class="py-4 text-sm text-zinc-600 leading-relaxed">
-                            В современных корпорациях решение о покупке принимает не один человек, а комитет из 3–7 лиц (финансисты, юристы, СБ, технические директора, генеральный директор). Сейлз физически не может дойти до каждого из них лично. Наши материалы и ABM-инструменты работают как «невидимый коммерческий директор»: они прогревают каждого участника цепочки принятия решений до того, как ваш менеджер зайдет на финальную встречу.
-                        </div>
+                    <div class="accordion-content bg-zinc-50 px-6">
+                        <p class="py-5 text-sm text-zinc-600">
+                            Используем обезличенные названия, относительные показатели и закрытые версии материалов.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FORM & CONTACTS SECTION -->
     <section id="form" class="py-24 bg-zinc-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="contacts">
+        <div id="contacts" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                
-                <div class="lg:col-span-5 flex flex-col justify-between">
-                    <div>
-                        <span class="text-xs font-bold uppercase tracking-widest text-zinc-400">Связаться с нами</span>
-                        <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-zinc-900 mt-2">
-                            Обсудим ваш проект?
-                        </h2>
-                        <p class="mt-4 text-zinc-600 leading-relaxed">
-                            Заполните форму, и наш ведущий стратег свяжется с вами для обсуждения задач и проведения первичного аудита.
-                        </p>
+                <div class="lg:col-span-5">
+                    <span class="text-xs font-bold uppercase tracking-widest text-zinc-400">Связаться с нами</span>
 
-                        <div class="mt-10 space-y-6">
-                            <div class="flex items-start space-x-4">
-                                <div class="w-10 h-10 rounded-xl bg-white border border-zinc-200 flex items-center justify-center text-zinc-900 shrink-0">
-                                    <i data-lucide="mail" class="w-5 h-5"></i>
-                                </div>
-                                <div>
-                                    <div class="text-xs text-zinc-400">Электронная почта</div>
-                                    <a href="mailto:hello@lulu-agency.com" class="text-base font-bold text-zinc-900 hover:underline">hello@lulu-agency.com</a>
-                                </div>
-                            </div>
+                    <h2 class="text-3xl sm:text-5xl font-display font-extrabold mt-2">
+                        Обсудим ваш проект?
+                    </h2>
 
-                            <div class="flex items-start space-x-4">
-                                <div class="w-10 h-10 rounded-xl bg-white border border-zinc-200 flex items-center justify-center text-zinc-900 shrink-0">
-                                    <i data-lucide="phone" class="w-5 h-5"></i>
-                                </div>
-                                <div>
-                                    <div class="text-xs text-zinc-400">Телефон</div>
-                                    <a href="tel:+74950000000" class="text-base font-bold text-zinc-900 hover:underline">+7 (495) 000-00-00</a>
-                                </div>
-                            </div>
+                    <p class="mt-4 text-zinc-600">
+                        Заполните форму, и мы свяжемся с вами для обсуждения задачи.
+                    </p>
 
-                            <div class="flex items-start space-x-4">
-                                <div class="w-10 h-10 rounded-xl bg-white border border-zinc-200 flex items-center justify-center text-zinc-900 shrink-0">
-                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
-                                </div>
-                                <div>
-                                    <div class="text-xs text-zinc-400">Главный офис</div>
-                                    <div class="text-base font-bold text-zinc-900">Москва, Пресненская наб., 12 (Башня Федерация)</div>
-                                </div>
-                            </div>
+                    <div class="mt-10 space-y-5">
+                        <div>
+                            <div class="text-xs text-zinc-400">Электронная почта</div>
+                            <a href="mailto:asadovrg@yandex.ru" class="font-bold hover:underline">
+                                asadovrg@yandex.ru
+                            </a>
                         </div>
-                    </div>
 
-                    <div class="mt-12 p-6 bg-white rounded-2xl border border-zinc-200">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-3 h-3 rounded-full bg-emerald-500 animate-ping"></div>
-                            <span class="text-xs font-semibold text-zinc-700">Скорость ответа: в течение 15 минут в рабочее время</span>
+                        <div>
+                            <div class="text-xs text-zinc-400">Срок ответа</div>
+                            <div class="font-bold">Обычно в течение одного рабочего дня</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-zinc-200 shadow-sm">
-                    <form id="lead-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
-                        
+                    <form
+                        id="lead-form"
+                        action="https://formsubmit.co/asadovrg@yandex.ru"
+                        method="POST"
+                        onsubmit="handleFormSubmit(event)"
+                        class="space-y-6"
+                    >
+                        <input type="hidden" name="_subject" value="Новая заявка с сайта Lulu">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <input
+                            type="text"
+                            name="_honey"
+                            class="hidden"
+                            tabindex="-1"
+                            autocomplete="off"
+                        >
+
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div>
-                                <label class="block text-xs font-bold uppercase tracking-wider text-zinc-700 mb-2">Ваше имя *</label>
-                                <input type="text" required placeholder="Александр" class="w-full px-4 py-3.5 bg-zinc-50 border border-zinc-200 rounded-xl text-zinc-900 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-900 transition-all">
+                                <label for="lead-name" class="block text-xs font-bold uppercase tracking-wider text-zinc-700 mb-2">
+                                    Ваше имя *
+                                </label>
+
+                                <input
+                                    id="lead-name"
+                                    name="Имя"
+                                    type="text"
+                                    required
+                                    autocomplete="name"
+                                    placeholder="Александр"
+                                    class="w-full px-4 py-3.5 bg-zinc-50 border border-zinc-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-zinc-900"
+                                >
                             </div>
+
                             <div>
-                                <label class="block text-xs font-bold uppercase tracking-wider text-zinc-700 mb-2">Телефон / Telegram *</label>
-                                <input type="text" required placeholder="+7 (999) 000-00-00" class="w-full px-4 py-3.5 bg-zinc-50 border border-zinc-200 rounded-xl text-zinc-900 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-900 transition-all">
+                                <label for="lead-contact" class="block text-xs font-bold uppercase tracking-wider text-zinc-700 mb-2">
+                                    Телефон / Telegram *
+                                </label>
+
+                                <input
+                                    id="lead-contact"
+                                    name="Телефон или Telegram"
+                                    type="text"
+                                    required
+                                    autocomplete="tel"
+                                    inputmode="tel"
+                                    placeholder="+7 (999) 000-00-00"
+                                    class="w-full px-4 py-3.5 bg-zinc-50 border border-zinc-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-zinc-900"
+                                >
                             </div>
                         </div>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div>
-                                <label class="block text-xs font-bold uppercase tracking-wider text-zinc-700 mb-2">Рабочий Email *</label>
-                                <input type="email" required placeholder="alex@company.com" class="w-full px-4 py-3.5 bg-zinc-50 border border-zinc-200 rounded-xl text-zinc-900 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-900 transition-all">
+                                <label for="lead-email" class="block text-xs font-bold uppercase tracking-wider text-zinc-700 mb-2">
+                                    Рабочий Email *
+                                </label>
+
+                                <input
+                                    id="lead-email"
+                                    name="email"
+                                    type="email"
+                                    required
+                                    autocomplete="email"
+                                    placeholder="alex@company.com"
+                                    class="w-full px-4 py-3.5 bg-zinc-50 border border-zinc-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-zinc-900"
+                                >
                             </div>
+
                             <div>
-                                <label class="block text-xs font-bold uppercase tracking-wider text-zinc-700 mb-2">Интересующая услуга</label>
-                                <select class="w-full px-4 py-3.5 bg-zinc-50 border border-zinc-200 rounded-xl text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-900 transition-all">
-                                    <option>Тендерный маркетинг и Упаковка</option>
+                                <label for="lead-service" class="block text-xs font-bold uppercase tracking-wider text-zinc-700 mb-2">
+                                    Интересующая услуга
+                                </label>
+
+                                <select
+                                    id="lead-service"
+                                    name="Услуга"
+                                    class="w-full px-4 py-3.5 bg-zinc-50 border border-zinc-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-zinc-900"
+                                >
+                                    <option>Тендерный маркетинг и упаковка</option>
                                     <option>ABM-маркетинг</option>
                                     <option>Digital-инфраструктура и сайты</option>
                                     <option>Внедрение CRM и аналитики</option>
@@ -817,166 +637,178 @@
                         </div>
 
                         <div>
-                            <label class="block text-xs font-bold uppercase tracking-wider text-zinc-700 mb-2">О проекте / Задачи</label>
-                            <textarea id="form-comment" rows="4" placeholder="Расскажите о вашей нише, текущей ситуации и целях..." class="w-full px-4 py-3.5 bg-zinc-50 border border-zinc-200 rounded-xl text-zinc-900 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-900 transition-all"></textarea>
+                            <label for="form-comment" class="block text-xs font-bold uppercase tracking-wider text-zinc-700 mb-2">
+                                О проекте / Задачи
+                            </label>
+
+                            <textarea
+                                id="form-comment"
+                                name="Задача"
+                                rows="4"
+                                placeholder="Расскажите о вашей нише, текущей ситуации и целях..."
+                                class="w-full px-4 py-3.5 bg-zinc-50 border border-zinc-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-zinc-900"
+                            ></textarea>
                         </div>
 
-                        <div class="pt-2">
-                            <button type="submit" class="w-full py-4 px-8 bg-zinc-900 hover:bg-zinc-800 text-white font-semibold rounded-2xl transition-all shadow-md hover:shadow-lg flex items-center justify-center space-x-2 text-base">
-                                <span>Отправить заявку</span>
-                                <i data-lucide="send" class="w-4 h-4 ml-1"></i>
-                            </button>
-                            <p class="text-xs text-center text-zinc-400 mt-4">
-                                Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности. Данные отправляются напрямую на почту агентства.
-                            </p>
-                        </div>
+                        <button
+                            type="submit"
+                            class="w-full py-4 px-8 bg-zinc-900 hover:bg-zinc-800 disabled:bg-zinc-500 text-white font-semibold rounded-2xl flex items-center justify-center"
+                        >
+                            <span class="submit-text">Отправить заявку</span>
+                            <i data-lucide="send" class="w-4 h-4 ml-2"></i>
+                        </button>
+
+                        <p id="form-error" class="hidden text-sm text-center text-rose-600" role="alert">
+                            Не удалось отправить заявку. Проверьте интернет и попробуйте ещё раз.
+                        </p>
+
+                        <p class="text-xs text-center text-zinc-400">
+                            Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.
+                        </p>
                     </form>
 
-                    <div id="form-success" class="hidden py-12 text-center space-y-4">
+                    <div id="form-success" class="hidden py-12 text-center">
                         <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
                             <i data-lucide="check-circle" class="w-8 h-8"></i>
                         </div>
-                        <h3 class="text-2xl font-bold text-zinc-900">Заявка успешно отправлена!</h3>
-                        <p class="text-sm text-zinc-600 max-w-md mx-auto">
-                            Спасибо за обращение. Наш ведущий стратег свяжется с вами по указанным контактам в течение 15 минут.
+
+                        <h3 class="text-2xl font-bold mt-4">Заявка успешно отправлена!</h3>
+
+                        <p class="text-sm text-zinc-600 mt-3">
+                            Спасибо. Мы свяжемся с вами в рабочее время.
                         </p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="bg-white border-t border-zinc-200 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="flex items-center space-x-2">
-                <span class="font-display font-extrabold text-2xl text-zinc-900">Lulu<span class="text-emerald-600">.</span></span>
-                <span class="text-xs text-zinc-400 ml-4">© 2026 Lulu Agency. Все права защищены.</span>
+            <div>
+                <span class="font-display font-extrabold text-2xl">
+                    Lulu<span class="text-emerald-600">.</span>
+                </span>
+
+                <span class="text-xs text-zinc-400 ml-4">
+                    © 2026 Lulu Agency
+                </span>
             </div>
 
-            <div class="flex space-x-6 text-sm text-zinc-500">
-                <button id="privacy-btn" class="hover:text-zinc-900 transition-colors focus:outline-none">Политика конфиденциальности</button>
-                <button id="terms-btn" class="hover:text-zinc-900 transition-colors focus:outline-none">Пользовательское соглашение</button>
+            <div class="text-sm text-zinc-500">
+                <button id="privacy-btn" class="hover:text-zinc-900">
+                    Политика конфиденциальности
+                </button>
             </div>
         </div>
     </footer>
 
-    <!-- МОДАЛЬНОЕ ОКНО ДЛЯ ДОКУМЕНТОВ -->
     <div id="legal-modal" class="fixed inset-0 z-[100] hidden items-center justify-center">
-        <!-- Backdrop -->
-        <div id="legal-modal-backdrop" class="absolute inset-0 bg-zinc-950/40 backdrop-blur-sm transition-opacity opacity-0 duration-300"></div>
-        
-        <!-- Modal Content -->
-        <div id="legal-modal-content" class="relative z-10 w-full max-w-3xl bg-white rounded-2xl shadow-xl border border-zinc-200 p-6 sm:p-8 m-4 transform scale-95 opacity-0 transition-all duration-300 max-h-[85vh] flex flex-col">
-            <div class="flex items-center justify-between mb-6 shrink-0 border-b border-zinc-100 pb-4">
-                <h3 id="legal-modal-title" class="text-xl sm:text-2xl font-bold text-zinc-900">Документ</h3>
-                <button id="close-modal-btn" class="p-2 text-zinc-400 hover:text-zinc-900 hover:bg-zinc-100 rounded-full transition-colors focus:outline-none">
+        <div id="legal-modal-backdrop" class="absolute inset-0 bg-zinc-950/40"></div>
+
+        <div class="relative z-10 w-full max-w-3xl bg-white rounded-2xl shadow-xl p-8 m-4">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="text-xl font-bold">Политика конфиденциальности</h3>
+
+                <button id="close-modal-btn" class="p-2">
                     <i data-lucide="x" class="w-6 h-6"></i>
                 </button>
             </div>
-            <div class="overflow-y-auto pr-4 custom-scrollbar flex-grow text-zinc-600 text-sm leading-relaxed space-y-4">
-                <p>Пользовательское соглашение и ПК</p>
-            </div>
+
+            <p class="text-sm text-zinc-600">
+                Данные из формы используются только для связи с пользователем и обсуждения его заявки.
+            </p>
         </div>
     </div>
 
-    <!-- JAVASCRIPT -->
     <script>
         lucide.createIcons();
 
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
 
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
 
-        mobileLinks.forEach(link => {
+        document.querySelectorAll('.mobile-link').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
         });
 
-        const accordionHeaders = document.querySelectorAll('.accordion-header');
-
-        accordionHeaders.forEach(header => {
+        document.querySelectorAll('.accordion-header').forEach(header => {
             header.addEventListener('click', () => {
                 const content = header.nextElementSibling;
-                const icon = header.querySelector('[data-lucide="chevron-down"]');
                 const isOpen = content.classList.contains('open');
-                
-                document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
-                document.querySelectorAll('.accordion-header [data-lucide="chevron-down"]').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                document.querySelectorAll('.accordion-content').forEach(item => {
+                    item.classList.remove('open');
+                });
 
                 if (!isOpen) {
                     content.classList.add('open');
-                    if (icon) icon.style.transform = 'rotate(180deg)';
                 }
             });
         });
 
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            const form = document.getElementById('lead-form');
-            const successMsg = document.getElementById('form-success');
+        async function handleFormSubmit(event) {
+            event.preventDefault();
 
-            form.style.display = 'none';
-            successMsg.classList.remove('hidden');
+            const form = event.currentTarget;
+            const button = form.querySelector('button[type="submit"]');
+            const buttonText = button.querySelector('.submit-text');
+            const errorMessage = document.getElementById('form-error');
+            const successMessage = document.getElementById('form-success');
+
+            button.disabled = true;
+            buttonText.textContent = 'Отправляем...';
+            errorMessage.classList.add('hidden');
+
+            try {
+                const response = await fetch(
+                    'https://formsubmit.co/ajax/asadovrg@yandex.ru',
+                    {
+                        method: 'POST',
+                        headers: {
+                            Accept: 'application/json'
+                        },
+                        body: new FormData(form)
+                    }
+                );
+
+                if (!response.ok) {
+                    throw new Error('Ошибка отправки');
+                }
+
+                form.classList.add('hidden');
+                successMessage.classList.remove('hidden');
+            } catch (error) {
+                errorMessage.classList.remove('hidden');
+            } finally {
+                button.disabled = false;
+                buttonText.textContent = 'Отправить заявку';
+            }
         }
 
-        // ЛОГИКА МОДАЛЬНОГО ОКНА 
-        const privacyBtn = document.getElementById('privacy-btn');
-        const termsBtn = document.getElementById('terms-btn');
-        const legalModal = document.getElementById('legal-modal');
+        const privacyButton = document.getElementById('privacy-btn');
+        const closeModalButton = document.getElementById('close-modal-btn');
+        const modal = document.getElementById('legal-modal');
         const modalBackdrop = document.getElementById('legal-modal-backdrop');
-        const modalContent = document.getElementById('legal-modal-content');
-        const closeModalBtn = document.getElementById('close-modal-btn');
-        const modalTitle = document.getElementById('legal-modal-title');
 
-        function openModal(title) {
-            modalTitle.textContent = title;
-            legalModal.classList.remove('hidden');
-            legalModal.classList.add('flex');
-            
-            // Заставляем браузер перерисовать стили перед анимацией
-            void legalModal.offsetWidth;
-            
-            modalBackdrop.classList.remove('opacity-0');
-            modalBackdrop.classList.add('opacity-100');
-            modalContent.classList.remove('scale-95', 'opacity-0');
-            modalContent.classList.add('scale-100', 'opacity-100');
-            
-            // Отключаем скролл на странице
-            document.body.style.overflow = 'hidden';
-        }
+        privacyButton.addEventListener('click', () => {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        });
 
         function closeModal() {
-            modalBackdrop.classList.remove('opacity-100');
-            modalBackdrop.classList.add('opacity-0');
-            modalContent.classList.remove('scale-100', 'opacity-100');
-            modalContent.classList.add('scale-95', 'opacity-0');
-            
-            // Ждем завершения transition (300ms) перед скрытием элемента
-            setTimeout(() => {
-                legalModal.classList.add('hidden');
-                legalModal.classList.remove('flex');
-                document.body.style.overflow = '';
-            }, 300);
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
         }
 
-        if(privacyBtn) privacyBtn.addEventListener('click', (e) => { e.preventDefault(); openModal('Политика конфиденциальности'); });
-        if(termsBtn) termsBtn.addEventListener('click', (e) => { e.preventDefault(); openModal('Пользовательское соглашение'); });
-        if(closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
-        if(modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
-        
-        // Закрытие по клавише Esc
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !legalModal.classList.contains('hidden')) {
-                closeModal();
-            }
-        });
+        closeModalButton.addEventListener('click', closeModal);
+        modalBackdrop.addEventListener('click', closeModal);
     </script>
+
 </body>
 </html>
