@@ -1,12 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru" class="scroll-smooth">
-    <!-- Vercel Web Analytics -->
-<script>
-    window.va = window.va || function () {
-        (window.vaq = window.vaq || []).push(arguments);
-    };
-</script>
-<script defer src="/_vercel/insights/script.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -134,6 +127,13 @@
             border-radius: 20px;
         }
     </style>
+    <!-- Vercel Web Analytics -->
+    <script>
+        window.va = window.va || function () {
+            (window.vaq = window.vaq || []).push(arguments);
+        };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body class="antialiased selection:bg-black selection:text-white">
 
@@ -1309,9 +1309,7 @@
 
                 if (!response.ok) throw new Error('FormSubmit error');
 
-                form.classList.add('hidden');
-                successMsg?.classList.remove('hidden');
-                successMsg?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                window.location.assign('/thanks.html');
             } catch (error) {
                 errorMsg?.classList.remove('hidden');
             } finally {
