@@ -126,6 +126,142 @@
             background-color: #e2e8f0;
             border-radius: 20px;
         }
+
+        /* Lulu motion system */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .lulu-reveal {
+            will-change: opacity, transform;
+        }
+
+        .lulu-motion .lulu-reveal:not(.is-visible) {
+            opacity: 0;
+            transform: translate3d(0, 22px, 0);
+        }
+
+        .lulu-motion .lulu-reveal {
+            transition:
+                opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+                transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+            transition-delay: var(--lulu-delay, 0ms);
+        }
+
+        .lulu-delay-1 { --lulu-delay: 80ms; }
+        .lulu-delay-2 { --lulu-delay: 160ms; }
+        .lulu-delay-3 { --lulu-delay: 240ms; }
+        .lulu-delay-4 { --lulu-delay: 320ms; }
+        .lulu-delay-5 { --lulu-delay: 400ms; }
+
+        .lulu-card,
+        .lulu-service-row,
+        .lulu-faq-row,
+        .lulu-form-card {
+            transition:
+                transform 320ms cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 320ms ease,
+                border-color 320ms ease,
+                background-color 320ms ease;
+        }
+
+        .lulu-solution-row {
+            transition:
+                background-color 320ms ease,
+                transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .lulu-route-progress-x {
+            transform: scaleX(0);
+            transform-origin: left center;
+            transition: transform 1250ms cubic-bezier(0.22, 1, 0.36, 1) 160ms;
+        }
+
+        .lulu-route-progress-y {
+            transform: scaleY(0);
+            transform-origin: center top;
+            transition: transform 1100ms cubic-bezier(0.22, 1, 0.36, 1) 120ms;
+        }
+
+        .lulu-route.is-visible .lulu-route-progress-x {
+            transform: scaleX(1);
+        }
+
+        .lulu-route.is-visible .lulu-route-progress-y {
+            transform: scaleY(1);
+        }
+
+        .lulu-process-step > div:first-child {
+            transition:
+                transform 520ms cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 320ms ease;
+        }
+
+        .lulu-motion .lulu-process-step:not(.is-visible) > div:first-child {
+            transform: scale(0.82);
+        }
+
+        header.lulu-scrolled {
+            box-shadow: 0 10px 35px rgba(9, 9, 11, 0.055);
+            border-color: rgba(9, 9, 11, 0.09);
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            .lulu-card:hover,
+            .lulu-form-card:hover {
+                transform: translateY(-4px);
+                border-color: #d4d4d8;
+                box-shadow: 0 16px 34px rgba(9, 9, 11, 0.06);
+            }
+
+            .lulu-service-row:hover,
+            .lulu-faq-row:hover {
+                border-color: #d4d4d8;
+            }
+
+            .lulu-solution-row:hover {
+                background-color: rgba(244, 244, 245, 0.46);
+            }
+
+            .lulu-process-step:hover > div:first-child {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 22px rgba(9, 9, 11, 0.08);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .lulu-motion .lulu-reveal,
+            .lulu-motion .lulu-reveal:not(.is-visible) {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+            }
+
+            .lulu-route-progress-x,
+            .lulu-route-progress-y {
+                transform: none !important;
+                transition: none !important;
+            }
+
+            .lulu-card,
+            .lulu-service-row,
+            .lulu-faq-row,
+            .lulu-form-card,
+            .lulu-solution-row,
+            .lulu-process-step > div:first-child {
+                transition: none !important;
+                transform: none !important;
+            }
+
+            .animate-ping {
+                animation: none !important;
+            }
+        }
+
     </style>
 </head>
 <body class="antialiased selection:bg-black selection:text-white">
@@ -173,24 +309,23 @@
     <!-- HERO SECTION -->
     <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 bg-grid-pattern overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-<h1 class="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-zinc-900 leading-[1.08] max-w-5xl">
+<h1 class="lulu-reveal lulu-hero-reveal text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-zinc-900 leading-[1.08] max-w-5xl">
                 Помогаем компаниям расти, продавать и выглядеть убедительно.
             </h1>
 
-            <p class="mt-8 text-lg sm:text-xl text-zinc-600 max-w-3xl leading-relaxed">
+            <p class="lulu-reveal lulu-hero-reveal lulu-delay-1 mt-8 text-lg sm:text-xl text-zinc-600 max-w-3xl leading-relaxed">
                 Исследуем рынок, упаковываем бизнес, развиваем бренд, создаём digital-продукты и автоматизируем процессы.
             </p>
 
-            <div class="mt-10 flex flex-col sm:flex-row gap-4">
+            <div class="lulu-reveal lulu-hero-reveal lulu-delay-2 mt-10 flex flex-col sm:flex-row gap-4">
                 <a href="#form" class="inline-flex items-center justify-center px-8 py-4 font-semibold text-white bg-zinc-900 rounded-full hover:bg-zinc-800 transition-all shadow-md hover:shadow-lg group">
                     Обсудить проект
                     <i data-lucide="arrow-up-right" class="w-5 h-5 ml-2 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
                 </a>
 
-                <a href="#form" class="inline-flex items-center justify-center px-8 py-4 font-semibold text-zinc-800 bg-white border border-zinc-200 rounded-full hover:bg-zinc-50 hover:border-zinc-300 transition-all">Обсудить проект</a>
             </div>
 
-            <div class="mt-20 pt-10 border-t border-zinc-200/80 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 items-start">
+            <div class="lulu-reveal lulu-hero-reveal lulu-delay-3 mt-20 pt-10 border-t border-zinc-200/80 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10 items-start">
                 <div class="min-w-0">
                     <div class="font-display text-2xl lg:text-3xl xl:text-[32px] font-extrabold text-zinc-900 leading-tight whitespace-nowrap">Фокус на результат</div>
                     <div class="text-sm text-zinc-500 mt-2 leading-relaxed max-w-[320px]">Оцениваем маркетинг по целевым показателям</div>
@@ -210,12 +345,12 @@
     <!-- AUDIENCE SECTION -->
     <section id="audience" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mb-12">
+            <div class="lulu-reveal max-w-3xl mb-12">
 <h2 class="text-3xl sm:text-5xl font-display font-extrabold">Для компаний с разными задачами и моделями продаж</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="p-8 bg-zinc-50 border border-zinc-200 rounded-2xl">
+                <div class="lulu-reveal lulu-card p-8 bg-zinc-50 border border-zinc-200 rounded-2xl">
                     <div class="w-12 h-12 mb-6 rounded-xl bg-white border border-zinc-200 flex items-center justify-center">
                         <i data-lucide="briefcase-business" class="w-6 h-6"></i>
                     </div>
@@ -227,7 +362,7 @@
                     </p>
                 </div>
 
-                <div class="p-8 bg-zinc-50 border border-zinc-200 rounded-2xl">
+                <div class="lulu-reveal lulu-card lulu-delay-1 p-8 bg-zinc-50 border border-zinc-200 rounded-2xl">
                     <div class="w-12 h-12 mb-6 rounded-xl bg-white border border-zinc-200 flex items-center justify-center">
                         <i data-lucide="sparkles" class="w-6 h-6"></i>
                     </div>
@@ -239,7 +374,7 @@
                     </p>
                 </div>
 
-                <div class="p-8 bg-zinc-50 border border-zinc-200 rounded-2xl">
+                <div class="lulu-reveal lulu-card lulu-delay-2 p-8 bg-zinc-50 border border-zinc-200 rounded-2xl">
                     <div class="w-12 h-12 mb-6 rounded-xl bg-white border border-zinc-200 flex items-center justify-center">
                         <i data-lucide="workflow" class="w-6 h-6"></i>
                     </div>
@@ -256,7 +391,7 @@
     <!-- SERVICES SECTION -->
     <section id="services" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+            <div class="lulu-reveal flex flex-col md:flex-row md:items-end justify-between mb-16">
                 <div>
 <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-zinc-900">Каталог услуг и стоимость</h2>
                 </div>
@@ -266,7 +401,7 @@
             <div class="space-y-4 max-w-5xl mx-auto">
 
                 <!-- 1. УПАКОВКА БИЗНЕСА И ТЕНДЕРНЫЙ МАРКЕТИНГ -->
-                <details class="group bg-zinc-50 rounded-2xl border border-zinc-200/80 transition-all duration-200 open:bg-white open:shadow-sm" open>
+                <details class="lulu-reveal lulu-service-row group bg-zinc-50 rounded-2xl border border-zinc-200/80 transition-all duration-200 open:bg-white open:shadow-sm" open>
                     <summary class="flex items-center justify-between p-6 cursor-pointer select-none font-bold text-zinc-900 text-lg md:text-xl">
                         <div class="flex items-center space-x-4">
                             <div class="w-12 h-12 rounded-xl bg-white border border-zinc-200 flex items-center justify-center text-zinc-900 shadow-sm shrink-0">
@@ -297,7 +432,7 @@
                 </details>
 
                 <!-- 2. ИССЛЕДОВАНИЯ И МАРКЕТИНГОВАЯ СТРАТЕГИЯ -->
-                <details class="group bg-zinc-50 rounded-2xl border border-zinc-200/80 transition-all duration-200 open:bg-white open:shadow-sm">
+                <details class="lulu-reveal lulu-service-row group bg-zinc-50 rounded-2xl border border-zinc-200/80 transition-all duration-200 open:bg-white open:shadow-sm">
                     <summary class="flex items-center justify-between p-6 cursor-pointer select-none font-bold text-zinc-900 text-lg md:text-xl">
                         <div class="flex items-center space-x-4">
                             <div class="w-12 h-12 rounded-xl bg-white border border-zinc-200 flex items-center justify-center text-zinc-900 shadow-sm shrink-0">
@@ -377,7 +512,7 @@
                 </details>
 
                 <!-- 3. БРЕНДИНГ -->
-                <details class="group bg-zinc-50 rounded-2xl border border-zinc-200/80 transition-all duration-200 open:bg-white open:shadow-sm">
+                <details class="lulu-reveal lulu-service-row group bg-zinc-50 rounded-2xl border border-zinc-200/80 transition-all duration-200 open:bg-white open:shadow-sm">
                     <summary class="flex items-center justify-between p-6 cursor-pointer select-none font-bold text-zinc-900 text-lg md:text-xl">
                         <div class="flex items-center space-x-4">
                             <div class="w-12 h-12 rounded-xl bg-white border border-zinc-200 flex items-center justify-center text-zinc-900 shadow-sm shrink-0">
@@ -436,7 +571,7 @@
                 </details>
 
                 <!-- 4. ПРОИЗВОДСТВО КОНТЕНТА -->
-                <details class="group bg-zinc-50 rounded-2xl border border-zinc-200/80 transition-all duration-200 open:bg-white open:shadow-sm">
+                <details class="lulu-reveal lulu-service-row group bg-zinc-50 rounded-2xl border border-zinc-200/80 transition-all duration-200 open:bg-white open:shadow-sm">
                     <summary class="flex items-center justify-between p-6 cursor-pointer select-none font-bold text-zinc-900 text-lg md:text-xl">
                         <div class="flex items-center space-x-4">
                             <div class="w-12 h-12 rounded-xl bg-white border border-zinc-200 flex items-center justify-center text-zinc-900 shadow-sm shrink-0">
@@ -474,7 +609,7 @@
                 </details>
 
                 <!-- 5. САЙТЫ И DIGITAL -->
-                <details class="group bg-zinc-50 rounded-2xl border border-zinc-200/80 transition-all duration-200 open:bg-white open:shadow-sm">
+                <details class="lulu-reveal lulu-service-row group bg-zinc-50 rounded-2xl border border-zinc-200/80 transition-all duration-200 open:bg-white open:shadow-sm">
                     <summary class="flex items-center justify-between p-6 cursor-pointer select-none font-bold text-zinc-900 text-lg md:text-xl">
                         <div class="flex items-center space-x-4">
                             <div class="w-12 h-12 rounded-xl bg-white border border-zinc-200 flex items-center justify-center text-zinc-900 shadow-sm shrink-0">
@@ -505,7 +640,7 @@
                 </details>
 
                 <!-- 6. ПРОДАЖИ И РЕПУТАЦИЯ -->
-                <details class="group bg-zinc-50 rounded-2xl border border-zinc-200/80 transition-all duration-200 open:bg-white open:shadow-sm">
+                <details class="lulu-reveal lulu-service-row group bg-zinc-50 rounded-2xl border border-zinc-200/80 transition-all duration-200 open:bg-white open:shadow-sm">
                     <summary class="flex items-center justify-between p-6 cursor-pointer select-none font-bold text-zinc-900 text-lg md:text-xl">
                         <div class="flex items-center space-x-4">
                             <div class="w-12 h-12 rounded-xl bg-white border border-zinc-200 flex items-center justify-center text-zinc-900 shadow-sm shrink-0">
@@ -557,7 +692,7 @@
                 </details>
 
                 <!-- 7. РАЗРАБОТКА ПО И АВТОМАТИЗАЦИЯ -->
-                <details class="group bg-zinc-50 rounded-2xl border border-zinc-200/80 transition-all duration-200 open:bg-white open:shadow-sm">
+                <details class="lulu-reveal lulu-service-row group bg-zinc-50 rounded-2xl border border-zinc-200/80 transition-all duration-200 open:bg-white open:shadow-sm">
                     <summary class="flex items-center justify-between p-6 cursor-pointer select-none font-bold text-zinc-900 text-lg md:text-xl">
                         <div class="flex items-center space-x-4">
                             <div class="w-12 h-12 rounded-xl bg-white border border-zinc-200 flex items-center justify-center text-zinc-900 shadow-sm shrink-0">
@@ -627,7 +762,7 @@
         <div class="absolute inset-0 bg-gradient-to-b from-white/45 via-transparent to-white/60 pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="max-w-3xl mb-16">
+            <div class="lulu-reveal max-w-3xl mb-16">
                 <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-zinc-900">
                     От задачи до рабочего результата
                 </h2>
@@ -636,15 +771,15 @@
                 </p>
             </div>
 
-            <div class="relative">
+            <div class="relative lulu-route">
                 <!-- Единый маршрут: горизонтальный на desktop, вертикальный на mobile -->
                 <div class="hidden lg:block absolute top-6 left-[5%] right-[5%] h-px bg-zinc-300"></div>
-                <div class="hidden lg:block absolute top-6 left-[5%] w-[90%] h-px bg-gradient-to-r from-zinc-900/70 via-zinc-500/60 to-emerald-500/70"></div>
-                <div class="lg:hidden absolute top-6 bottom-8 left-6 w-px bg-gradient-to-b from-zinc-900/70 via-zinc-300 to-emerald-500/70"></div>
+                <div class="lulu-route-progress-x hidden lg:block absolute top-6 left-[5%] w-[90%] h-px bg-gradient-to-r from-zinc-900/70 via-zinc-500/60 to-emerald-500/70"></div>
+                <div class="lulu-route-progress-y lg:hidden absolute top-6 bottom-8 left-6 w-px bg-gradient-to-b from-zinc-900/70 via-zinc-300 to-emerald-500/70"></div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-0">
 
-                    <article class="relative grid grid-cols-[48px_1fr] gap-5 lg:block lg:pr-7">
+                    <article class="lulu-reveal lulu-process-step relative grid grid-cols-[48px_1fr] gap-5 lg:block lg:pr-7">
                         <div class="relative z-10 w-12 h-12 rounded-full bg-white border border-zinc-300 flex items-center justify-center text-sm font-bold text-zinc-900 shadow-sm">
                             01
                         </div>
@@ -662,7 +797,7 @@
                         </div>
                     </article>
 
-                    <article class="relative grid grid-cols-[48px_1fr] gap-5 lg:block lg:px-7 lg:border-l lg:border-zinc-200/80">
+                    <article class="lulu-reveal lulu-process-step lulu-delay-1 relative grid grid-cols-[48px_1fr] gap-5 lg:block lg:px-7 lg:border-l lg:border-zinc-200/80">
                         <div class="relative z-10 w-12 h-12 rounded-full bg-white border border-zinc-300 flex items-center justify-center text-sm font-bold text-zinc-900 shadow-sm">
                             02
                         </div>
@@ -680,7 +815,7 @@
                         </div>
                     </article>
 
-                    <article class="relative grid grid-cols-[48px_1fr] gap-5 lg:block lg:px-7 lg:border-l lg:border-zinc-200/80">
+                    <article class="lulu-reveal lulu-process-step lulu-delay-2 relative grid grid-cols-[48px_1fr] gap-5 lg:block lg:px-7 lg:border-l lg:border-zinc-200/80">
                         <div class="relative z-10 w-12 h-12 rounded-full bg-white border border-zinc-300 flex items-center justify-center text-sm font-bold text-zinc-900 shadow-sm">
                             03
                         </div>
@@ -698,7 +833,7 @@
                         </div>
                     </article>
 
-                    <article class="relative grid grid-cols-[48px_1fr] gap-5 lg:block lg:px-7 lg:border-l lg:border-zinc-200/80">
+                    <article class="lulu-reveal lulu-process-step lulu-delay-3 relative grid grid-cols-[48px_1fr] gap-5 lg:block lg:px-7 lg:border-l lg:border-zinc-200/80">
                         <div class="relative z-10 w-12 h-12 rounded-full bg-white border border-zinc-300 flex items-center justify-center text-sm font-bold text-zinc-900 shadow-sm">
                             04
                         </div>
@@ -716,7 +851,7 @@
                         </div>
                     </article>
 
-                    <article class="relative grid grid-cols-[48px_1fr] gap-5 lg:block lg:pl-7 lg:border-l lg:border-zinc-200/80">
+                    <article class="lulu-reveal lulu-process-step lulu-delay-4 relative grid grid-cols-[48px_1fr] gap-5 lg:block lg:pl-7 lg:border-l lg:border-zinc-200/80">
                         <div class="relative z-10 w-12 h-12 rounded-full bg-zinc-900 border border-zinc-900 flex items-center justify-center text-sm font-bold text-white shadow-sm">
                             05
                         </div>
@@ -741,7 +876,7 @@
     <!-- BUSINESS SOLUTIONS SECTION -->
     <section id="solutions" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl mb-14 md:mb-16">
+            <div class="lulu-reveal max-w-4xl mb-14 md:mb-16">
                 <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-zinc-900">
                     Несколько услуг — одно бизнес-решение
                 </h2>
@@ -752,7 +887,7 @@
 
             <div class="border-t border-zinc-300">
 
-                <article class="group grid grid-cols-1 lg:grid-cols-[90px_1.1fr_1.35fr_1.15fr] gap-5 lg:gap-10 py-9 md:py-11 border-b border-zinc-200 items-start">
+                <article class="lulu-reveal lulu-solution-row group grid grid-cols-1 lg:grid-cols-[90px_1.1fr_1.35fr_1.15fr] gap-5 lg:gap-10 py-9 md:py-11 border-b border-zinc-200 items-start">
                     <div class="font-display text-4xl md:text-5xl font-extrabold text-zinc-200 group-hover:text-emerald-500/40 transition-colors">
                         01
                     </div>
@@ -775,7 +910,7 @@
                     </div>
                 </article>
 
-                <article class="group grid grid-cols-1 lg:grid-cols-[90px_1.1fr_1.35fr_1.15fr] gap-5 lg:gap-10 py-9 md:py-11 border-b border-zinc-200 items-start">
+                <article class="lulu-reveal lulu-solution-row group grid grid-cols-1 lg:grid-cols-[90px_1.1fr_1.35fr_1.15fr] gap-5 lg:gap-10 py-9 md:py-11 border-b border-zinc-200 items-start">
                     <div class="font-display text-4xl md:text-5xl font-extrabold text-zinc-200 group-hover:text-emerald-500/40 transition-colors">
                         02
                     </div>
@@ -798,7 +933,7 @@
                     </div>
                 </article>
 
-                <article class="group grid grid-cols-1 lg:grid-cols-[90px_1.1fr_1.35fr_1.15fr] gap-5 lg:gap-10 py-9 md:py-11 border-b border-zinc-300 items-start">
+                <article class="lulu-reveal lulu-solution-row group grid grid-cols-1 lg:grid-cols-[90px_1.1fr_1.35fr_1.15fr] gap-5 lg:gap-10 py-9 md:py-11 border-b border-zinc-300 items-start">
                     <div class="font-display text-4xl md:text-5xl font-extrabold text-zinc-200 group-hover:text-emerald-500/40 transition-colors">
                         03
                     </div>
@@ -835,41 +970,41 @@
 <!-- TRUST SECTION -->
     <section id="trust" class="py-24 bg-zinc-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mb-16">
+            <div class="lulu-reveal max-w-3xl mb-16">
                 <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-zinc-900">Работаем честно</h2>
                 <p class="mt-5 text-zinc-600 text-base sm:text-lg leading-relaxed">
-                    Строим работу вокруг бизнес-задачи, понятных этапов и результата, который можно использовать на практике.
+                    Строим работу вокруг бизнес-задачи, понятных этапов и&nbsp;результата, который можно использовать на практике.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <article class="bg-white border border-zinc-200 rounded-2xl p-8">
-                    <div class="flex items-center gap-3 mb-5">
-                        <i data-lucide="scan-search" class="w-5 h-5 text-zinc-500"></i>
-                        <h3 class="text-xl font-bold text-zinc-900">Опираемся на факты</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+                <article class="lulu-reveal lulu-card h-full bg-white border border-zinc-200 rounded-2xl p-8 flex flex-col">
+                    <div class="flex items-start gap-3 mb-5 min-h-[68px]">
+                        <i data-lucide="scan-search" class="w-5 h-5 text-zinc-500 mt-1 shrink-0"></i>
+                        <h3 class="text-xl font-bold text-zinc-900 leading-tight">Опираемся<br>на факты</h3>
                     </div>
                     <p class="text-sm text-zinc-600 leading-relaxed">
-                        Изучаем документы, продукт, процессы и опыт команды. Не придумываем преимущества, а находим и структурируем реальные основания для решений.
+                        Изучаем документы, продукт, процессы и&nbsp;опыт команды. Не придумываем преимущества, а находим и&nbsp;структурируем реальные основания для решений.
                     </p>
                 </article>
 
-                <article class="bg-white border border-zinc-200 rounded-2xl p-8">
-                    <div class="flex items-center gap-3 mb-5">
-                        <i data-lucide="shield-check" class="w-5 h-5 text-zinc-500"></i>
-                        <h3 class="text-xl font-bold text-zinc-900">Соблюдаем конфиденциальность</h3>
+                <article class="lulu-reveal lulu-card lulu-delay-1 h-full bg-white border border-zinc-200 rounded-2xl p-8 flex flex-col">
+                    <div class="flex items-start gap-3 mb-5 min-h-[68px]">
+                        <i data-lucide="shield-check" class="w-5 h-5 text-zinc-500 mt-1 shrink-0"></i>
+                        <h3 class="text-xl font-bold text-zinc-900 leading-tight">Соблюдаем<br>конфиденциальность</h3>
                     </div>
                     <p class="text-sm text-zinc-600 leading-relaxed">
-                        Не публикуем материалы, данные и показатели без согласования. При необходимости фиксируем условия конфиденциальности в договоре или NDA.
+                        Не публикуем материалы, данные и&nbsp;показатели без согласования. При необходимости фиксируем условия конфиденциальности в&nbsp;договоре или NDA.
                     </p>
                 </article>
 
-                <article class="bg-white border border-zinc-200 rounded-2xl p-8">
-                    <div class="flex items-center gap-3 mb-5">
-                        <i data-lucide="list-checks" class="w-5 h-5 text-zinc-500"></i>
-                        <h3 class="text-xl font-bold text-zinc-900">Фиксируем результат</h3>
+                <article class="lulu-reveal lulu-card lulu-delay-2 h-full bg-white border border-zinc-200 rounded-2xl p-8 flex flex-col">
+                    <div class="flex items-start gap-3 mb-5 min-h-[68px]">
+                        <i data-lucide="list-checks" class="w-5 h-5 text-zinc-500 mt-1 shrink-0"></i>
+                        <h3 class="text-xl font-bold text-zinc-900 leading-tight">Фиксируем<br>результат</h3>
                     </div>
                     <p class="text-sm text-zinc-600 leading-relaxed">
-                        До старта определяем состав проекта, этапы, сроки и итоговые материалы. Клиент заранее понимает, что получит на каждом этапе.
+                        До старта определяем состав проекта, этапы, сроки и&nbsp;итоговые материалы. Клиент заранее понимает, что получит на&nbsp;каждом этапе.
                     </p>
                 </article>
             </div>
@@ -879,14 +1014,14 @@
 <!-- FAQ SECTION -->
     <section id="faq" class="py-24 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="lulu-reveal text-center mb-16">
 <h2 class="text-3xl sm:text-4xl font-display font-extrabold text-zinc-900">
                     Часто задаваемые вопросы
                 </h2>
             </div>
 
             <div class="space-y-4">
-                <div class="border border-zinc-200 rounded-2xl overflow-hidden">
+                <div class="lulu-reveal lulu-faq-row border border-zinc-200 rounded-2xl overflow-hidden">
                     <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
                         <span class="pr-4">У нас сложная и специфическая ниша. Как вы разберетесь в процессах без профильного образования?</span>
                         <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 transition-transform shrink-0"></i>
@@ -898,7 +1033,7 @@
                     </div>
                 </div>
 
-                <div class="border border-zinc-200 rounded-2xl overflow-hidden">
+                <div class="lulu-reveal lulu-faq-row border border-zinc-200 rounded-2xl overflow-hidden">
                     <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
                         <span class="pr-4">Сколько времени потребуется от наших сотрудников? Мои инженеры и так перегружены.</span>
                         <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 transition-transform shrink-0"></i>
@@ -916,7 +1051,7 @@
                     </div>
                 </div>
 
-                <div class="border border-zinc-200 rounded-2xl overflow-hidden">
+                <div class="lulu-reveal lulu-faq-row border border-zinc-200 rounded-2xl overflow-hidden">
                     <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
                         <span class="pr-4">У нас скоро важный конкурс. Успеем ли мы подготовить материалы за 2–3 недели?</span>
                         <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 transition-transform shrink-0"></i>
@@ -928,7 +1063,7 @@
                     </div>
                 </div>
 
-                <div class="border border-zinc-200 rounded-2xl overflow-hidden">
+                <div class="lulu-reveal lulu-faq-row border border-zinc-200 rounded-2xl overflow-hidden">
                     <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
                         <span class="pr-4">Даете ли вы гарантию, что после вашей упаковки мы точно выиграем тендер?</span>
                         <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 transition-transform shrink-0"></i>
@@ -942,7 +1077,7 @@
                     </div>
                 </div>
 
-                <div class="border border-zinc-200 rounded-2xl overflow-hidden">
+                <div class="lulu-reveal lulu-faq-row border border-zinc-200 rounded-2xl overflow-hidden">
                     <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
                         <span class="pr-4">У нас подписаны NDA с клиентами. Как показать масштаб проектов без нарушений?</span>
                         <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 transition-transform shrink-0"></i>
@@ -959,7 +1094,7 @@
                     </div>
                 </div>
 
-                <div class="border border-zinc-200 rounded-2xl overflow-hidden">
+                <div class="lulu-reveal lulu-faq-row border border-zinc-200 rounded-2xl overflow-hidden">
                     <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
                         <span class="pr-4">Как оценить целесообразность вложений в услуги упаковки и маркетинга (ROI)?</span>
                         <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 transition-transform shrink-0"></i>
@@ -971,7 +1106,7 @@
                     </div>
                 </div>
 
-                <div class="border border-zinc-200 rounded-2xl overflow-hidden">
+                <div class="lulu-reveal lulu-faq-row border border-zinc-200 rounded-2xl overflow-hidden">
                     <button class="accordion-header w-full text-left p-6 flex justify-between items-center bg-white hover:bg-zinc-50 transition-colors font-bold text-lg text-zinc-900">
                         <span class="pr-4">У нас сильный отдел продаж. Зачем нам тратиться на маркетинг и Executive Profile?</span>
                         <i data-lucide="chevron-down" class="w-5 h-5 text-zinc-400 transition-transform shrink-0"></i>
@@ -991,7 +1126,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="contacts">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
                 
-                <div class="lg:col-span-5 flex flex-col justify-between">
+                <div class="lulu-reveal lg:col-span-5 flex flex-col justify-between">
                     <div>
 <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-zinc-900">
                             Обсудим ваш проект?
@@ -1031,7 +1166,7 @@
                     </div>
                 </div>
 
-                <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-zinc-200 shadow-sm">
+                <div class="lulu-reveal lulu-form-card lulu-delay-1 lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-zinc-200 shadow-sm">
                     <form id="lead-form" action="send.php" method="POST" onsubmit="handleFormSubmit(event)" class="space-y-6">
                         <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
 
@@ -1357,6 +1492,67 @@
         document.addEventListener('keydown', event => {
             if (event.key === 'Escape' && legalModal && !legalModal.classList.contains('hidden')) closeLegalModal();
         });
+
+        // Lulu motion: restrained reveal, route drawing and subtle header response
+        (() => {
+            const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (reduceMotion) return;
+
+            const root = document.documentElement;
+
+            try {
+                root.classList.add('lulu-motion');
+
+                const heroItems = document.querySelectorAll('.lulu-hero-reveal');
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        heroItems.forEach((item) => item.classList.add('is-visible'));
+                    });
+                });
+
+                const revealObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach((entry) => {
+                        if (!entry.isIntersecting) return;
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    });
+                }, {
+                    threshold: 0.12,
+                    rootMargin: '0px 0px -8% 0px'
+                });
+
+                document.querySelectorAll('.lulu-reveal:not(.lulu-hero-reveal)').forEach((item) => {
+                    revealObserver.observe(item);
+                });
+
+                const routeObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach((entry) => {
+                        if (!entry.isIntersecting) return;
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    });
+                }, {
+                    threshold: 0.2,
+                    rootMargin: '0px 0px -10% 0px'
+                });
+
+                document.querySelectorAll('.lulu-route').forEach((route) => {
+                    routeObserver.observe(route);
+                });
+
+                const header = document.querySelector('header');
+                const updateHeader = () => {
+                    header?.classList.toggle('lulu-scrolled', window.scrollY > 12);
+                };
+
+                updateHeader();
+                window.addEventListener('scroll', updateHeader, { passive: true });
+            } catch (error) {
+                root.classList.remove('lulu-motion');
+                console.warn('Lulu motion disabled:', error);
+            }
+        })();
+
     </script>
 </body>
 </html>
